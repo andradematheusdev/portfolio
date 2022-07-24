@@ -7,7 +7,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        "header-icon-bg": "rgba(255,255,255, .3)"
+        "header-icon-bg": "rgba(255,255,255, .3)",
+        "header-scroll-bg": "rgba(0,0,0,.7)"
       },
     },
   },

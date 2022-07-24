@@ -3,7 +3,10 @@ import Pc from "../components/Pc";
 
 export default function Wellcome() {
   return (
-    <section className="flex flex-1 h-full bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover items-center justify-center">
+    <section
+      id="home"
+      className="flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover items-center justify-center"
+    >
       <div className="flex flex-col flex-1 p-[200px]">
         <div className="mb-8 space-y-4">
           <span className="text-white text-3xl font-open-sans">OLÁ MUNDO!</span>

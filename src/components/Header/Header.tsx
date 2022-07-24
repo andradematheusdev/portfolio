@@ -2,17 +2,36 @@ import Logo from "../Logo";
 
 import { DiscordLogo, LinkedinLogo, GithubLogo } from "phosphor-react";
 import Button from "../Button/Button";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
+  }, []);
+
+  const scrollClasses = scroll ? "bg-header-scroll-bg h-12" : "bg-none h-20";
+
   return (
-    <header className="flex items-center justify-between px-16 fixed top-0 h-20 w-full">
+    <header
+      className={`flex items-center justify-between px-16 fixed top-0  w-full ${scrollClasses} transition-all`}
+    >
       <div className="">
-        <Logo />
+        <a href="#home">
+          <Logo />
+        </a>
       </div>
       <div className="flex h-full items-center justify-center">
         <div>
-          <a href="#" className="text-white flex flex-1 items-center justify-center px-6">
+          <a href="#home" className="text-white flex flex-1 items-center justify-center px-6">
             INÍCIO
+          </a>
+        </div>
+        <div>
+          <a href="#about" className="text-white flex flex-1 items-center justify-center px-6">
+            SOBRE
           </a>
         </div>
         <div>
@@ -48,7 +67,11 @@ export default function Header() {
           </a>
         </div>
         <div>
-          <a href="#" className="text-white flex flex-1 items-center justify-center px-6">
+          <a
+            href="https://discord.gg/BYZ8pET"
+            className="text-white flex flex-1 items-center justify-center px-6"
+            target={"_blank"}
+          >
             <span className="bg-header-icon-bg p-2 border border-white rounded-full">
               <DiscordLogo />
             </span>
