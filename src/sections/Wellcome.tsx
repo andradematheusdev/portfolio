@@ -1,5 +1,4 @@
 import Button from "../components/Button/Button";
-import Pc from "../components/Pc";
 
 export default function Wellcome() {
   return (
@@ -7,7 +6,7 @@ export default function Wellcome() {
       id="home"
       className="flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center"
     >
-      <div className="flex flex-col flex-1 p-[200px]">
+      <div className="flex flex-col flex-1 px-16">
         <div className="mb-8 space-y-4">
           <span className="text-white text-3xl ">OLÁ MUNDO!</span>
           <h1 className="text-white text-6xl  font-bold">BEM VINDO AO MEU ESPAÇO.</h1>
@@ -31,8 +30,8 @@ export default function Wellcome() {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 justify-center items-center">
-        <Pc />
+      <div className="flex flex-1 justify-center items-center px-16">
+        <img src="/images/PC.png" />
       </div>
     </section>
   );
