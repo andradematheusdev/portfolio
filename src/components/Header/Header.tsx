@@ -25,22 +25,34 @@ export default function Header() {
       </div>
       <div className="flex h-full items-center justify-center">
         <div>
-          <a href="#home" className="text-white flex flex-1 items-center justify-center px-6">
+          <a
+            href="#home"
+            className="text-white flex flex-1 items-center justify-center px-6 hover:text-violet-700 transition-colors"
+          >
             INÍCIO
           </a>
         </div>
         <div>
-          <a href="#about" className="text-white flex flex-1 items-center justify-center px-6">
+          <a
+            href="#about"
+            className="text-white flex flex-1 items-center justify-center px-6 hover:text-violet-700 transition-colors"
+          >
             SOBRE
           </a>
         </div>
         <div>
-          <a href="#" className="text-white flex flex-1 items-center justify-center px-6">
+          <a
+            href="#"
+            className="text-white flex flex-1 items-center justify-center px-6 hover:text-violet-700 transition-colors"
+          >
             CONHECIMENTOS
           </a>
         </div>
         <div>
-          <a href="#" className="text-white flex flex-1 items-center justify-center px-6">
+          <a
+            href="#"
+            className="text-white flex flex-1 items-center justify-center px-6 hover:text-violet-700 transition-colors"
+          >
             PROJETOS
           </a>
         </div>
@@ -50,7 +62,7 @@ export default function Header() {
             className="text-white flex flex-1 items-center justify-center px-6"
             target={"_blank"}
           >
-            <span className="bg-header-icon-bg p-2 border border-white rounded-full">
+            <span className="bg-header-icon-bg p-2 border border-white rounded-full hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover">
               <LinkedinLogo />
             </span>
           </a>
@@ -61,7 +73,7 @@ export default function Header() {
             className="text-white flex flex-1 items-center justify-center px-6"
             target={"_blank"}
           >
-            <span className="bg-header-icon-bg p-2 border border-white rounded-full">
+            <span className="bg-header-icon-bg p-2 border border-white rounded-full hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover">
               <GithubLogo />
             </span>
           </a>
@@ -72,7 +84,7 @@ export default function Header() {
             className="text-white flex flex-1 items-center justify-center px-6"
             target={"_blank"}
           >
-            <span className="bg-header-icon-bg p-2 border border-white rounded-full">
+            <span className="bg-header-icon-bg p-2 border border-white rounded-full hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover">
               <DiscordLogo />
             </span>
           </a>
@@ -80,7 +92,7 @@ export default function Header() {
         <div>
           <Button
             text="ENVIAR E-MAIL"
-            className="text-white border border-white hover:bg-header-icon-bg leading-none"
+            className="text-white border border-white hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover leading-none"
           />
         </div>
       </div>
