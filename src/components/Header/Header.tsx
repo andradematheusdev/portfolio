@@ -18,7 +18,7 @@ export default function Header() {
     <header
       className={`flex items-center justify-between px-16 fixed top-0  w-full ${scrollClasses} transition-all`}
     >
-      <div className="">
+      <div>
         <a href="#home">
           <Logo />
         </a>
