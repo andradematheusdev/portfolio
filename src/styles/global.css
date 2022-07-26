@@ -7,6 +7,14 @@ html {
   @apply font-open-sans;
 }
 
+.wellcome-section {
+  @apply flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
+}
+
+.skills-section {
+  @apply flex min-h-screen bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
+}
+
 .my-header {
   @apply flex items-center justify-between px-2 md:px-16 fixed top-0 w-full transition-all;
 }
@@ -20,7 +28,7 @@ html {
 }
 
 .mobile-nav {
-  @apply backdrop-blur-2xl bg-mobile-nav-bg flex flex-col md:hidden w-2/3 min-h-screen fixed transition-all;
+  @apply backdrop-blur-2xl bg-nav-bg flex flex-col md:hidden w-2/3 min-h-screen fixed transition-all;
 }
 
 .mobile-nav a {

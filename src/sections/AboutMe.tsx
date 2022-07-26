@@ -3,14 +3,11 @@ import ReactTypingEffect from "react-typing-effect";
 
 export default function AboutMe() {
   return (
-    <section id="about" className="flex flex-col w-full justify-center bg-black pb-16">
+    <section id="about" className="flex flex-col w-full justify-center bg-black pb-28">
       <SectionTitle title="SOBRE MIM" />
       <div className="flex flex-row flex-wrap w-full justify-start">
         <div className="flex w-full md:w-1/3 items-center justify-center mb-16 md:mb-0">
-          <img
-            src="https://github.com/Heloriel.png"
-            className="rounded-full w-80 h-80 border-4 border-violet-700"
-          />
+          <img src="" className="rounded-full w-80 h-80 border-4 border-violet-700" />
         </div>
         <div className="flex flex-col justify-center flex-1 px-8 md:px-20">
           <h1 className="text-white font-bold text-4xl text-center md:text-start">

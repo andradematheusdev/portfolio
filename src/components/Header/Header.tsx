@@ -14,7 +14,7 @@ export default function Header() {
     });
   }, []);
 
-  const scrollClasses = scroll ? "bg-header-scroll-bg h-16 md:h-12" : "bg-none h-20";
+  const scrollClasses = scroll ? "bg-nav-bg h-16 md:h-12" : "bg-none h-20";
 
   return (
     <>
@@ -36,12 +36,12 @@ export default function Header() {
             </a>
           </div>
           <div>
-            <a href="#" className="hover:text-violet-700">
+            <a href="#skills" className="hover:text-violet-700">
               CONHECIMENTOS
             </a>
           </div>
           <div>
-            <a href="#" className="hover:text-violet-700">
+            <a href="#projects" className="hover:text-violet-700">
               PROJETOS
             </a>
           </div>

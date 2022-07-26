@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import MenuContext from "./contexts/MobileMenuContext";
 import AboutMe from "./sections/AboutMe";
+import Skills from "./sections/Skills";
 import Wellcome from "./sections/Wellcome";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <main className="flex flex-col w-full">
         <Wellcome />
         <AboutMe />
+        <Skills />
       </main>
     </>
   );
