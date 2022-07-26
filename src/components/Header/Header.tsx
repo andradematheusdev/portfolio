@@ -3,6 +3,7 @@ import Logo from "../Logo";
 import { DiscordLogo, LinkedinLogo, GithubLogo } from "phosphor-react";
 import Button from "../Button/Button";
 import { useEffect, useState } from "react";
+import MobileMenuToggle from "../MobileMenuToggle/MobileMenuToggle";
 
 export default function Header() {
   const [scroll, setScroll] = useState(false);
@@ -12,18 +13,18 @@ export default function Header() {
     });
   }, []);
 
-  const scrollClasses = scroll ? "bg-header-scroll-bg h-12" : "bg-none h-20";
+  const scrollClasses = scroll ? "bg-header-scroll-bg h-16 md:h-12" : "bg-none h-20";
 
   return (
     <header
-      className={`flex items-center justify-between px-16 fixed top-0  w-full ${scrollClasses} transition-all`}
+      className={`flex items-center justify-between px-4 md:px-16 fixed top-0 w-full ${scrollClasses} transition-all`}
     >
       <div>
         <a href="#home">
           <Logo />
         </a>
       </div>
-      <div className="flex h-full items-center justify-center">
+      <div className="hidden md:flex h-full items-center justify-center">
         <div>
           <a
             href="#home"
@@ -95,6 +96,9 @@ export default function Header() {
             className="text-white border border-white hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover leading-none"
           />
         </div>
+      </div>
+      <div className="flex md:hidden">
+        <MobileMenuToggle />
       </div>
     </header>
   );
