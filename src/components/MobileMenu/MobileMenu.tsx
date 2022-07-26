@@ -24,13 +24,17 @@ export default function MobileMenu() {
       <a href="#projects" onClick={handleClick}>
         PROJETOS
       </a>
-      <a href="https://www.linkedin.com/in/matheus-andrade-ba2b16226/" onClick={handleClick}>
+      <a
+        href="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
+        target={"_blank"}
+        onClick={handleClick}
+      >
         LINKEDIN
       </a>
-      <a href="https://github.com/Heloriel" onClick={handleClick}>
+      <a href="https://github.com/Heloriel" target={"_blank"} onClick={handleClick}>
         GITHUB
       </a>
-      <a href="https://discord.gg/BYZ8pET" onClick={handleClick}>
+      <a href="https://discord.gg/BYZ8pET" target={"_blank"} onClick={handleClick}>
         DISCORD
       </a>
       <a href="" className="last" onClick={handleClick}>
