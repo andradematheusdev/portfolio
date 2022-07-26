@@ -8,7 +8,7 @@ export default function MobileMenu() {
     context.setMenuState(false);
   }
 
-  const menuVisible = context.menuState ? "left-0" : "left-[-300px]";
+  const menuVisible = context.menuState ? "left-0" : "left-[-66%] hidden";
 
   return (
     <div className={`mobile-nav ${menuVisible}`}>
