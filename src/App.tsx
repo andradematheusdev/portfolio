@@ -1,11 +1,14 @@
 import Header from "./components/Header/Header";
+import MenuContext from "./contexts/MobileMenuContext";
 import AboutMe from "./sections/AboutMe";
 import Wellcome from "./sections/Wellcome";
 
 function App() {
   return (
     <>
-      <Header />
+      <MenuContext>
+        <Header />
+      </MenuContext>
       <main className="flex flex-col w-full">
         <Wellcome />
         <AboutMe />

@@ -6,3 +6,27 @@ html {
   scroll-behavior: smooth;
   @apply font-open-sans;
 }
+
+.my-header {
+  @apply flex items-center justify-between px-2 md:px-16 fixed top-0 w-full transition-all;
+}
+
+.my-header a {
+  @apply text-white flex flex-1 items-center justify-center px-6 transition-colors;
+}
+
+.header-icon {
+  @apply bg-header-icon-bg p-2 border border-white rounded-full hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover;
+}
+
+.mobile-nav {
+  @apply backdrop-blur-2xl bg-mobile-nav-bg flex flex-col md:hidden w-2/3 min-h-screen fixed transition-all;
+}
+
+.mobile-nav a {
+  @apply flex h-16 justify-center items-center border-t border-zinc-800 text-white;
+}
+
+.mobile-nav .last {
+  @apply border-b;
+}

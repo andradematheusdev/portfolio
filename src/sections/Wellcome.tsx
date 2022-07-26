@@ -6,7 +6,7 @@ export default function Wellcome() {
       id="home"
       className="flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap"
     >
-      <div className="flex flex-col flex-1 px-6 mt-16 md:px-16 max-w-full">
+      <div className="flex flex-col flex-1 px-6 mt-16 md:px-20 max-w-full">
         <div className="mb-8 space-y-4">
           <span className="text-white text-3xl ">OLÁ MUNDO!</span>
           <h1 className="text-white text-6xl  font-bold">BEM VINDO AO MEU ESPAÇO.</h1>
