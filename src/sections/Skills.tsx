@@ -1,5 +1,6 @@
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 import SkillBlock from "../components/SkillBlock/SkillBlock";
+import SkillDescription from "../components/SkillDescription/SkillDescription";
 
 export default function Skills() {
   return (
@@ -9,7 +10,9 @@ export default function Skills() {
           <SectionTitle title="Conhecimentos" />
         </div>
         <div className="flex flex-row w-full">
-          <div className="flex-1">Description</div>
+          <div className="flex-1 pr-16">
+            <SkillDescription />
+          </div>
           <div className="grid grid-cols-5 gap-6">
             <SkillBlock tech="html" />
             <SkillBlock tech="css" />

@@ -1,3 +1,13 @@
 export default function SkillDescription() {
-  return <div>SkillDescription</div>;
+  return (
+    <div className="flex flex-col w-full bg-nav-bg rounded-lg p-8">
+      <h2 className="text-violet-700 text-3xl font-bold mb-8">ReactJS</h2>
+      <p className="text-white leading-relaxed text-justify">
+        Loren ipsun dolor sit amet Loren ipsun dolor sit amet Loren ipsun dolor sit amet Loren ipsun
+        dolor sit ametLoren ipsun dolor sit ametLoren ipsun dolor sit ametLoren ipsun dolor sit
+        ametLoren ipsun dolor sit ametLoren ipsun dolor sit ametLoren ipsun dolor sit ametLoren
+        ipsun dolor sit ametLoren ipsun dolor sit amet
+      </p>
+    </div>
+  );
 }

@@ -21,7 +21,7 @@ export default function Header() {
       <header className={`my-header ${scrollClasses}`}>
         <div>
           <a href="#home">
-            <Logo />
+            <Logo className="fill-white" />
           </a>
         </div>
         <div className="hidden md:flex h-full items-center justify-center">

@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import MenuContext from "./contexts/MobileMenuContext";
 import AboutMe from "./sections/AboutMe";
 import Skills from "./sections/Skills";
@@ -15,6 +16,7 @@ function App() {
         <AboutMe />
         <Skills />
       </main>
+      <Footer />
     </>
   );
 }
