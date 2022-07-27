@@ -4,6 +4,7 @@ import MenuContext from "./contexts/MobileMenuContext";
 import AboutMe from "./sections/AboutMe";
 import Skills from "./sections/Skills";
 import Wellcome from "./sections/Wellcome";
+import Projects from "./sections/Projects";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Wellcome />
         <AboutMe />
         <Skills />
+        <Projects />
       </main>
       <Footer />
     </>

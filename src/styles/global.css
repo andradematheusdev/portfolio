@@ -11,8 +11,12 @@ html {
   @apply flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
 }
 
+.projects-section {
+  @apply flex min-h-screen bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
+}
+
 .skills-section {
-  @apply flex min-h-screen bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
+  @apply flex min-h-screen bg-black bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
 }
 
 .my-header {
@@ -20,7 +24,7 @@ html {
 }
 
 .my-header a {
-  @apply text-white flex flex-1 items-center justify-center px-6 transition-colors;
+  @apply text-white flex flex-1 items-center justify-center px-4 transition-colors;
 }
 
 .header-icon {

@@ -14,7 +14,7 @@ export default function Header() {
     });
   }, []);
 
-  const scrollClasses = scroll ? "bg-nav-bg h-16 md:h-12" : "bg-none h-20";
+  const scrollClasses = scroll ? "bg-nav-bg h-16 md:h-12 backdrop-blur-md" : "bg-none h-20";
 
   return (
     <>

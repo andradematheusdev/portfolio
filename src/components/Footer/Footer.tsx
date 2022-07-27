@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="flex items-center flex-row w-full h-16 bg-zinc-900 px-16">
       <div className="flex-1">
         <span>
-          <Logo className={"fill-violet-700"} />
+          <Logo className={"fill-violet-500"} />
         </span>
       </div>
       <div className="flex flex-1">
