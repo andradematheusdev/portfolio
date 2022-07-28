@@ -24,7 +24,7 @@ body {
 }
 
 .skills-section {
-  @apply flex min-h-screen bg-black bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center py-8;
+  @apply flex min-h-screen bg-black bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center pb-8;
 }
 
 .my-header {
@@ -44,7 +44,7 @@ body {
 }
 
 .mobile-nav .link {
-  @apply flex h-16 justify-center items-center border-t border-zinc-700 text-white;
+  @apply flex h-16 justify-center items-center border-b border-zinc-700 text-white;
 }
 
 .mobile-nav a {
@@ -53,8 +53,4 @@ body {
 
 .mobile-nav .last {
   @apply border-b border-zinc-700;
-}
-
-.mobile-nav .last {
-  @apply border-b;
 }

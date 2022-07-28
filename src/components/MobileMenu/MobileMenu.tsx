@@ -14,7 +14,7 @@ export default function MobileMenu() {
 
   return (
     <div className={`mobile-nav z-50 ${menuVisible}`}>
-      <a href="#" className="link" onClick={handleClick}>
+      <a href="#" className="link first" onClick={handleClick}>
         INÍCIO
       </a>
       <a href="#about" className="link" onClick={handleClick}>
@@ -57,7 +57,7 @@ export default function MobileMenu() {
           </span>
         </a>
       </div>
-      <div className="link px-4" onClick={handleClick}>
+      <div className="link border-none px-4" onClick={handleClick}>
         <Button text="ENVIAR E-MAIL" className="border rounded-full w-full" />
       </div>
     </div>

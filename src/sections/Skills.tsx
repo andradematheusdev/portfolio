@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="skills-section overflow-hidden rounded-t-[40px] sm:rounded-none"
+      className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none"
     >
       <div className="flex flex-1 flex-col items-center px-4 lg:px-10">
         <SectionTitle title="Conhecimentos" className="my-16 text-xl" />
