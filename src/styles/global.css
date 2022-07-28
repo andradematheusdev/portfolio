@@ -7,6 +7,10 @@ html {
   @apply font-open-sans;
 }
 
+body {
+  @apply bg-zinc-900;
+}
+
 .wellcome-section {
   @apply flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
 }
@@ -36,11 +40,15 @@ html {
 }
 
 .mobile-nav {
-  @apply backdrop-blur-2xl bg-nav-bg flex flex-col lg:hidden w-2/3 min-h-screen fixed transition-all;
+  @apply backdrop-blur-2xl bg-nav-bg flex flex-col lg:hidden w-2/3 md:w-2/5 min-h-screen fixed transition-all;
 }
 
 .mobile-nav .link {
   @apply flex h-16 justify-center items-center border-t border-zinc-700 text-white;
+}
+
+.mobile-nav a {
+  @apply select-none;
 }
 
 .mobile-nav .last {
