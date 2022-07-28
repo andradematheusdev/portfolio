@@ -11,6 +11,10 @@ html {
   @apply flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
 }
 
+.about-section {
+  @apply flex flex-col w-full bg-zinc-900 pb-28 min-h-screen;
+}
+
 .projects-section {
   @apply flex min-h-screen bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
 }

@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
     fontFamily: {
-      "open-sans": ['Open Sans', 'sans-serif'],
+      "open-sans": ['Poppins', 'sans-serif'],
     },
     extend: {
       colors: {
