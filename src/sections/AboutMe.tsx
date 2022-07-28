@@ -30,7 +30,7 @@ export default function AboutMe() {
           <div className="leading-relaxed space-y-6">
             <p className="text-white">
               <span>
-                Meu nome é Matheus, tenho 27 Anos, sou de Magé - RJ, estudo programação e estou me
+                Meu nome é Matheus, tenho 27 anos, sou de Magé - RJ, estudo programação e estou me
                 graduando em Sistemas para Internet.
               </span>
             </p>

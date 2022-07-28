@@ -1,5 +1,7 @@
+import { DiscordLogo, GithubLogo, LinkedinLogo } from "phosphor-react";
 import { useContext } from "react";
 import { Context, MenuContextType } from "../../contexts/MobileMenuContext";
+import Button from "../Button/Button";
 
 export default function MobileMenu() {
   const context = useContext<MenuContextType>(Context);
@@ -12,34 +14,52 @@ export default function MobileMenu() {
 
   return (
     <div className={`mobile-nav z-50 ${menuVisible}`}>
-      <a href="#" onClick={handleClick}>
+      <a href="#" className="link" onClick={handleClick}>
         INÍCIO
       </a>
-      <a href="#about" onClick={handleClick}>
+      <a href="#about" className="link" onClick={handleClick}>
         SOBRE
       </a>
-      <a href="#skills" onClick={handleClick}>
+      <a href="#skills" className="link" onClick={handleClick}>
         CONHECIMENTOS
       </a>
-      <a href="#projects" onClick={handleClick}>
+      <a href="#projects" className="link last" onClick={handleClick}>
         PROJETOS
       </a>
-      <a
-        href="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
-        target={"_blank"}
-        onClick={handleClick}
-      >
-        LINKEDIN
-      </a>
-      <a href="https://github.com/Heloriel" target={"_blank"} onClick={handleClick}>
-        GITHUB
-      </a>
-      <a href="https://discord.gg/BYZ8pET" target={"_blank"} onClick={handleClick}>
-        DISCORD
-      </a>
-      <a href="" className="last" onClick={handleClick}>
-        ENVIAR E-MAIL
-      </a>
+      <div className="flex flex-row border-b border-zinc-700">
+        <a
+          href="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
+          className="text-white flex flex-1 h-16 items-center justify-center px-6"
+          target={"_blank"}
+        >
+          <span className="">
+            <LinkedinLogo size={32} />
+          </span>
+        </a>
+
+        <a
+          href="https://github.com/Heloriel"
+          className="text-white flex flex-1 items-center justify-center px-6"
+          target={"_blank"}
+        >
+          <span className="">
+            <GithubLogo size={32} />
+          </span>
+        </a>
+
+        <a
+          href="https://discord.gg/BYZ8pET"
+          className="text-white flex flex-1 items-center justify-center px-6"
+          target={"_blank"}
+        >
+          <span className="">
+            <DiscordLogo size={32} />
+          </span>
+        </a>
+      </div>
+      <div className="link px-4" onClick={handleClick}>
+        <Button text="ENVIAR E-MAIL" className="border rounded-full w-full" />
+      </div>
     </div>
   );
 }

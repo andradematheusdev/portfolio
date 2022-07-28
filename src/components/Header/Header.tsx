@@ -62,7 +62,7 @@ export default function Header() {
               className="text-white flex flex-1 items-center justify-center px-6"
               target={"_blank"}
             >
-              <span className="bg-header-icon-bg p-2 border border-white rounded-full hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover">
+              <span className="header-icon">
                 <GithubLogo />
               </span>
             </a>
@@ -73,7 +73,7 @@ export default function Header() {
               className="text-white flex flex-1 items-center justify-center px-6"
               target={"_blank"}
             >
-              <span className="bg-header-icon-bg p-2 border border-white rounded-full hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover">
+              <span className="header-icon">
                 <DiscordLogo />
               </span>
             </a>
@@ -81,7 +81,7 @@ export default function Header() {
           <div>
             <Button
               text="ENVIAR E-MAIL"
-              className="text-white border border-white hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover leading-none"
+              className="text-white border border-white hover:border-violet-700 transition-colors ml-2 hover:bg-header-icon-bg-hover leading-none"
             />
           </div>
         </div>

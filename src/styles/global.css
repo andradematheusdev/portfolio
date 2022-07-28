@@ -28,7 +28,7 @@ html {
 }
 
 .my-header a {
-  @apply text-white flex flex-1 items-center justify-center px-4 transition-colors;
+  @apply text-white flex flex-1 items-center justify-center px-2 transition-colors;
 }
 
 .header-icon {
@@ -39,8 +39,12 @@ html {
   @apply backdrop-blur-2xl bg-nav-bg flex flex-col lg:hidden w-2/3 min-h-screen fixed transition-all;
 }
 
-.mobile-nav a {
-  @apply flex h-16 justify-center items-center border-t border-zinc-800 text-white;
+.mobile-nav .link {
+  @apply flex h-16 justify-center items-center border-t border-zinc-700 text-white;
+}
+
+.mobile-nav .last {
+  @apply border-b border-zinc-700;
 }
 
 .mobile-nav .last {
