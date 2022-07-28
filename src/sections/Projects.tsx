@@ -5,7 +5,9 @@ export default function Projects() {
   return (
     <section id="projects" className="projects-section px-4">
       <SectionTitle title="projetos" className="text-lg my-16" />
-      <ProjectCard />
+      <div>
+        <ProjectCard />
+      </div>
     </section>
   );
 }

@@ -24,7 +24,7 @@ body {
 }
 
 .projects-section {
-  @apply flex min-h-screen bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap pb-8;
+  @apply flex flex-col min-h-screen bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap pb-8;
 }
 
 .my-header {

@@ -27,7 +27,7 @@ export default function ProjectCard() {
   }, []);
 
   return (
-    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden backdrop-blur-md">
+    <div className="flex flex-col w-full sm:max-w-[350px] bg-zinc-800 rounded-xl overflow-hidden backdrop-blur-md">
       <div className="flex w-full h-64 overflow-hidden">
         <img src={dog} className="w-full object-cover object-center" />
       </div>

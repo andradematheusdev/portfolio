@@ -7,7 +7,7 @@ export default function AboutMe() {
     <section id="about" className="about-section">
       <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2">
         <div className="flex flex-1 items-center justify-center mb-8 lg:mb-0 min-w-[80px]">
-          <img src="https://github.com/Heloriel" className="rounded-lg w-80 h-auto" />
+          <img src="https://github.com/Heloriel.png" className="rounded-lg w-80 h-auto" />
         </div>
         <div className="flex flex-1 flex-col">
           <SectionTitle title="SOBRE MIM" className="mb-8 text-center md:text-start" />
