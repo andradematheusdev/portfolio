@@ -5,15 +5,13 @@ import SkillDescription from "../components/SkillDescription/SkillDescription";
 export default function Skills() {
   return (
     <section id="skills" className="skills-section">
-      <div className="flex flex-1 flex-col h-screen items-center px-16 bg-section-bg-mask">
-        <div className="text-white">
-          <SectionTitle title="Conhecimentos" />
-        </div>
-        <div className="flex flex-row justify-between w-full">
-          <div className="w-2/5 pr-16">
+      <div className="flex flex-1 flex-col items-center px-4 lg:px-16">
+        <SectionTitle title="Conhecimentos" className="my-20 text-xl" />
+        <div className="flex flex-row flex-wrap justify-center lg:justify-between w-full">
+          <div className="w-full lg:w-2/5 mb-8 lg:mb-0">
             <SkillDescription />
           </div>
-          <div className="grid grid-cols-5 gap-6 w-2/5">
+          <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 lg:w-2/5">
             <SkillBlock tech="html" />
             <SkillBlock tech="css" />
             <SkillBlock tech="sass" />

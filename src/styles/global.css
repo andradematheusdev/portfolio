@@ -12,7 +12,7 @@ html {
 }
 
 .about-section {
-  @apply flex flex-col w-full bg-zinc-900 pb-28 min-h-screen;
+  @apply flex flex-col w-full bg-zinc-900 pb-28 min-h-screen justify-center px-8 lg:px-14;
 }
 
 .projects-section {
@@ -20,7 +20,7 @@ html {
 }
 
 .skills-section {
-  @apply flex min-h-screen bg-black bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
+  @apply flex min-h-screen bg-black bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center py-8;
 }
 
 .my-header {
@@ -36,7 +36,7 @@ html {
 }
 
 .mobile-nav {
-  @apply backdrop-blur-2xl bg-nav-bg flex flex-col md:hidden w-2/3 min-h-screen fixed transition-all;
+  @apply backdrop-blur-2xl bg-nav-bg flex flex-col lg:hidden w-2/3 min-h-screen fixed transition-all;
 }
 
 .mobile-nav a {

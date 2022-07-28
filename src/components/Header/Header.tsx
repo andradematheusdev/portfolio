@@ -14,17 +14,17 @@ export default function Header() {
     });
   }, []);
 
-  const scrollClasses = scroll ? "bg-nav-bg h-16 md:h-12 backdrop-blur-md" : "bg-none h-20";
+  const scrollClasses = scroll ? "bg-nav-bg h-12 backdrop-blur-md" : "bg-none h-20";
 
   return (
     <>
-      <header className={`my-header ${scrollClasses}`}>
+      <header className={`my-header z-40 ${scrollClasses}`}>
         <div>
           <a href="#home">
             <Logo className="fill-white" />
           </a>
         </div>
-        <div className="hidden md:flex h-full items-center justify-center">
+        <div className="hidden lg:flex h-full items-center justify-center">
           <div>
             <a href="#home" className="hover:text-violet-700">
               INÍCIO
@@ -85,7 +85,7 @@ export default function Header() {
             />
           </div>
         </div>
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
           <MobileMenuToggle />
         </div>
       </header>

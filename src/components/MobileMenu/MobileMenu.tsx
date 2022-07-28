@@ -8,10 +8,10 @@ export default function MobileMenu() {
     context.setMenuState(false);
   }
 
-  const menuVisible = context.menuState ? "left-0" : "left-[-66%] hidden";
+  const menuVisible = context.menuState ? "left-0" : "left-[-100%] hidden";
 
   return (
-    <div className={`mobile-nav ${menuVisible}`}>
+    <div className={`mobile-nav z-50 ${menuVisible}`}>
       <a href="#" onClick={handleClick}>
         INÍCIO
       </a>

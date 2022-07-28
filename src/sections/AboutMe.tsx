@@ -5,31 +5,32 @@ import { CaretRight } from "phosphor-react";
 export default function AboutMe() {
   return (
     <section id="about" className="about-section">
-      <SectionTitle title="SOBRE MIM" />
-      <div className="flex flex-1 justify-center items-center">
-        <div className="flex md:w-4/12 items-center justify-center mb-16 md:mb-0">
-          <img src="https://github.com/Heloriel.png" className="rounded-lg w-80 h-auto" />
+      <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2">
+        <div className="flex flex-1 items-center justify-center mb-8 lg:mb-0 min-w-[80px]">
+          <img src="https://github.com/Heloriel" className="rounded-lg w-80 h-auto" />
         </div>
-        <div className="flex flex-col md:w-5/12 justify-center md:px-16">
-          <h1 className="text-white font-bold text-4xl text-center md:text-start">
+        <div className="flex flex-1 flex-col">
+          <SectionTitle title="SOBRE MIM" className="mb-8 text-center md:text-start" />
+          <h1 className="text-white font-bold text-4xl text-center md:text-start mb-16 md:mb-0">
             OLÁ, EU SOU O MATHEUS!
           </h1>
-          <span className="flex items-center text-white font-light text-xl mb-8 text-center md:text-start">
-            <CaretRight size={18} className="mr-2" />
-            <span>DESENVOLVEDOR FRONT-END COM</span>
-            <ReactTypingEffect
-              text={["REACT", "TYPESCRIPT", "TAILWIND"]}
-              speed={50}
-              typingDelay={10}
-              eraseSpeed={10}
-              className="text-violet-500 ml-1"
-              cursorClassName="text-white"
-            />
-          </span>
+          <div className="flex flex-wrap items-center text-white font-light text-lg mb-8 h-[50px] lg:h-auto">
+            <span className="flex flex-nowrap flex-row items-center w-full justify-center md:justify-start text-center md:text-start">
+              <CaretRight size={18} className="mr-2 hidden lg:inline" />
+              <ReactTypingEffect
+                staticText="DESENVOLVEDOR FRONT-END COM"
+                text={["REACT", "TYPESCRIPT", "TAILWIND"]}
+                speed={50}
+                typingDelay={10}
+                eraseSpeed={10}
+                cursorClassName="text-white"
+              />
+            </span>
+          </div>
           <div className="leading-relaxed space-y-6">
-            <p className="text-white flex items-center">
+            <p className="text-white">
               <span>
-                Meu nome é Matheus, tenho 27 Anos, sou de Magé - RJ, estududo programação e estou me
+                Meu nome é Matheus, tenho 27 Anos, sou de Magé - RJ, estudo programação e estou me
                 graduando em Sistemas para Internet.
               </span>
             </p>

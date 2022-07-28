@@ -5,14 +5,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex items-center flex-row w-full h-16 bg-zinc-900 px-16">
-      <div className="flex-1">
-        <span>
+    <footer className="flex w-full bg-zinc-900 px-8">
+      <div className="flex flex-col md:flex-row w-full border-t border-zinc-600 py-8">
+        <span className="flex flex-1 justify-center md:justify-start mb-6 md:mb-0">
           <Logo className={"fill-violet-500"} />
         </span>
-      </div>
-      <div className="flex flex-1">
-        <span className="flex items-center justify-end w-full text-white">
+        <span className="flex flex-1 justify-center md:justify-end text-white">
           {currentYear} - Feito com <Coffee className="mx-2" size={24} /> por mim.
         </span>
       </div>
