@@ -19,12 +19,12 @@ body {
   @apply flex flex-col w-full bg-zinc-900 pb-28 min-h-screen justify-center px-8 lg:px-14;
 }
 
-.projects-section {
-  @apply flex min-h-screen bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
-}
-
 .skills-section {
   @apply flex min-h-screen bg-black bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center pb-8;
+}
+
+.projects-section {
+  @apply flex min-h-screen bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap pb-8;
 }
 
 .my-header {
