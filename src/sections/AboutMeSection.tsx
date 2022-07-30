@@ -2,7 +2,7 @@ import SectionTitle from "../components/SectionTitle/SectionTitle";
 import ReactTypingEffect from "react-typing-effect";
 import { CaretRight } from "phosphor-react";
 
-export default function AboutMe() {
+export default function AboutMeSection() {
   return (
     <section id="about" className="about-section">
       <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2">
@@ -28,18 +28,14 @@ export default function AboutMe() {
             </span>
           </div>
           <div className="leading-relaxed space-y-6">
-            <p className="text-white">
-              <span>
-                Meu nome é Matheus, tenho 27 anos, sou de Magé - RJ, estudo programação e estou me
-                graduando em Sistemas para Internet.
-              </span>
+            <p className="text-white text-justify sm:text-start">
+              Meu nome é Matheus, tenho 27 anos, sou de Magé - RJ, estudo programação e estou me
+              graduando em Sistemas para Internet.
             </p>
-            <p className="text-white">
-              <span>
-                Minha jornada na programação começou em 2013 quando comecei a trabalhar com
-                desenvolvimento php, hoje o foco dos meus estudos é em desenvolvimento front-end com
-                React e TypeScript.
-              </span>
+            <p className="text-white text-justify sm:text-start">
+              Minha jornada na programação começou em 2013 quando comecei a trabalhar com
+              desenvolvimento php, hoje o foco dos meus estudos é em desenvolvimento front-end com
+              React e TypeScript.
             </p>
           </div>
         </div>

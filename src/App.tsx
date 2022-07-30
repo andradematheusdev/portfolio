@@ -1,10 +1,12 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import MenuContext from "./contexts/MobileMenuContext";
-import AboutMe from "./sections/AboutMe";
-import Skills from "./sections/Skills";
-import Wellcome from "./sections/Wellcome";
-import Projects from "./sections/Projects";
+import WellcomeSection from "./sections/WellcomeSection";
+import AboutMeSection from "./sections/AboutMeSection";
+import SkillsSection from "./sections/SkillsSection";
+import ProjectsSection from "./sections/ProjectsSection";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./libs/apollo";
 
 function App() {
   return (
@@ -13,10 +15,12 @@ function App() {
         <Header />
       </MenuContext>
       <main className="flex flex-col w-full">
-        <Wellcome />
-        <AboutMe />
-        <Skills />
-        <Projects />
+        <ApolloProvider client={client}>
+          <WellcomeSection />
+          <AboutMeSection />
+          <SkillsSection />
+          <ProjectsSection />
+        </ApolloProvider>
       </main>
       <Footer />
     </>
