@@ -82,6 +82,7 @@ export default function Header() {
             <Button
               text="ENVIAR E-MAIL"
               className="text-white border border-white hover:border-violet-700 transition-colors ml-2 hover:bg-header-icon-bg-hover leading-none"
+              url="mailto:andradematheus.dev@gmail.com"
             />
           </div>
         </div>
