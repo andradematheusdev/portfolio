@@ -103,6 +103,7 @@ export default function SkillsSection() {
             {data.skills.map((skill) => {
               return (
                 <button
+                  key={skill.id}
                   onMouseEnter={() => {
                     handleSkillClick(skill);
                   }}
@@ -110,7 +111,7 @@ export default function SkillsSection() {
                     handleSkillClick(skill);
                   }}
                 >
-                  <SkillBlock key={skill.id} tech={skill.icon} />
+                  <SkillBlock tech={skill.icon} />
                 </button>
               );
             })}
