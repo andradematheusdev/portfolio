@@ -13,7 +13,7 @@ interface Skills {
   name: string;
   icon: string;
   description: string;
-  footerNote: string;
+  skillLevel: number;
 }
 
 function SkillsLoading() {
@@ -61,7 +61,7 @@ export default function SkillsSection() {
         name
         icon
         description
-        footerNote
+        skillLevel
         order
       }
     }
@@ -69,12 +69,10 @@ export default function SkillsSection() {
 
   const [skillTitle, setSkillTitle] = useState("");
   const [skillDesc, setSkillDesc] = useState("");
-  const [skillFooter, setSkillFooter] = useState("");
+  const [skillLevel, setSkillLevel] = useState(0);
   const [skillActive, setSkillActive] = useState(false);
 
   const { loading, data } = useQuery<{ skills: Skills[] }>(GET_SKILLS_QUERY);
-
-  console.log(data);
 
   if (loading) {
     return <SkillsLoading />;
@@ -87,8 +85,7 @@ export default function SkillsSection() {
   function handleSkillClick(skill: Skills) {
     setSkillTitle(skill.name);
     setSkillDesc(skill.description);
-    setSkillFooter(skill.footerNote);
-    setSkillActive(true);
+    setSkillLevel(skill.skillLevel);
   }
 
   return (
@@ -100,7 +97,7 @@ export default function SkillsSection() {
         <SectionTitle title="Conhecimentos" className="my-16 text-xl" />
         <div className="flex flex-row flex-wrap justify-center lg:justify-between w-full">
           <div className="w-full sm:px-16 lg:px-0 lg:pr-2 lg:w-2/5 mb-8 lg:mb-0">
-            <SkillDescription title={skillTitle} desc={skillDesc} footerNote={skillFooter} />
+            <SkillDescription title={skillTitle} desc={skillDesc} level={skillLevel} />
           </div>
           <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 w-full place-items-center place-content-start lg:w-2/5">
             {data.skills.map((skill) => {
