@@ -16,7 +16,7 @@ interface Projects {
 export default function ProjectsSection() {
   const GET_PROJECTS_QUERY = gql`
     query GetProjects {
-      projects(first: 50) {
+      projects(first: 50, orderBy: order_ASC) {
         demo
         description
         id
