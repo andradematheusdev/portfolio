@@ -5,8 +5,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex w-full bg-zinc-900 px-8">
-      <div className="flex flex-col md:flex-row w-full border-t border-zinc-600 py-8">
+    <footer className="flex w-full bg-zinc-800 px-8 border-t border-zinc-600">
+      <div className="flex flex-col md:flex-row w-full py-8">
         <span className="flex flex-1 justify-center md:justify-start mb-6 md:mb-0">
           <Logo className={"fill-violet-500"} />
         </span>

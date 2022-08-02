@@ -26,9 +26,6 @@ export default function WellcomeSection() {
           />
         </div>
       </div>
-      {/* <div className="flex flex-1 justify-center items-center px-2 min-w-full md:px-16 md:min-w-[610px]">
-        <img src="/images/PC.png" />
-      </div> */}
     </section>
   );
 }

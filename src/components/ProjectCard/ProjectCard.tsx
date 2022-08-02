@@ -38,7 +38,7 @@ export default function ProjectCard({ demo, description, name, stack, image }: P
             {demo ? (
               <Button
                 text="DEMO"
-                className="bg-violet-500 text-white rounded px-8"
+                className="bg-violet-500 text-white rounded px-8 hover:bg-violet-600 transition-colors"
                 url={demo}
                 blank
               />
