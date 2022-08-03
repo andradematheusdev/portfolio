@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import ProjectCard from "../components/ProjectCard/ProjectCard";
+import { ProjectCard, ProjectCardLoading } from "../components/ProjectCard/ProjectCard";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 
 interface Projects {
@@ -35,12 +35,15 @@ export default function ProjectsSection() {
     return (
       <section id="projects" className="projects-section px-4 lg:px-10">
         <SectionTitle title="projetos" className="text-lg my-16" />
-        <div className="flex w-full justify-center items-center">Carregando...</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full min-h-[350px]">
+          <ProjectCardLoading />
+          <ProjectCardLoading />
+          <ProjectCardLoading />
+          <ProjectCardLoading />
+        </div>
       </section>
     );
   }
-
-  console.log(data);
 
   if (!data || !data.projects) {
     return (

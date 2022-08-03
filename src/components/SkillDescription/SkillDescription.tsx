@@ -37,7 +37,7 @@ export function SkillDescription({ title, desc, level }: Props) {
 
 export function SkillDescriptionLoading() {
   return (
-    <div className="flex flex-col w-full items-center justify-center bg-nav-bg rounded-lg p-8 min-h-[300px]">
+    <div className="flex flex-col w-full items-center justify-center bg-nav-bg rounded-lg p-8 min-h-[350px]">
       <CircleNotch size={32} className="animate-spin" color="#fff" />
     </div>
   );

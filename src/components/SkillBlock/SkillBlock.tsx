@@ -16,7 +16,7 @@ export function SkillBlock({ tech }: Props) {
 
 export function SkillBlockLoading() {
   return (
-    <div className="flex w-24 h-24 justify-center items-center bg-nav-bg p-2 cursor-pointer overflow-hidden rounded-xl">
+    <div className="flex w-20 h-20 justify-center items-center p-2 cursor-pointer overflow-hidden rounded-xl bg-nav-bg">
       <CircleNotch size={32} className="animate-spin" color="#fff" />
     </div>
   );

@@ -28,7 +28,13 @@ function SkillsLoading() {
           <div className="w-full lg:pr-2 lg:w-2/5 mb-8 lg:mb-0">
             <SkillDescriptionLoading />
           </div>
-          <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 w-full place-items-center place-content-start lg:w-3/5">
+          <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 w-full place-items-center place-content-start lg:w-2/5">
+            <SkillBlockLoading />
+            <SkillBlockLoading />
+            <SkillBlockLoading />
+            <SkillBlockLoading />
+            <SkillBlockLoading />
+            <SkillBlockLoading />
             <SkillBlockLoading />
           </div>
         </div>
@@ -70,7 +76,6 @@ export default function SkillsSection() {
   const [skillTitle, setSkillTitle] = useState("");
   const [skillDesc, setSkillDesc] = useState("");
   const [skillLevel, setSkillLevel] = useState(0);
-  const [skillActive, setSkillActive] = useState(false);
 
   const { loading, data } = useQuery<{ skills: Skills[] }>(GET_SKILLS_QUERY);
 

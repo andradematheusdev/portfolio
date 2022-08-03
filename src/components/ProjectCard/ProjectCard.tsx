@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { CircleNotch } from "phosphor-react";
 import Button from "../Button/Button";
 
 type Props = {
@@ -11,13 +11,21 @@ type Props = {
   };
 };
 
-export default function ProjectCard({ demo, description, name, stack, image }: Props) {
+export function ProjectCardLoading() {
+  return (
+    <div className="flex flex-col w-full items-center justify-center bg-zinc-800 rounded-xl overflow-hidden">
+      <CircleNotch size={32} className="animate-spin" color="#fff" />
+    </div>
+  );
+}
+
+export function ProjectCard({ demo, description, name, stack, image }: Props) {
   let footerBorder = "border-none";
   if (stack.length != 0 || demo) {
     footerBorder = "border-t border-zinc-700";
   }
   return (
-    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden backdrop-blur-md">
+    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden">
       <div className="flex w-full h-48 overflow-hidden">
         <img src={image.url} className="w-full object-cover object-center" />
       </div>
