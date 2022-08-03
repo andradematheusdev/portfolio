@@ -25,7 +25,7 @@ export function ProjectCard({ demo, description, name, stack, image }: Props) {
     footerBorder = "border-t border-zinc-700";
   }
   return (
-    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden">
+    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px]">
       <div className="flex w-full h-48 overflow-hidden">
         <img src={image.url} className="w-full object-cover object-center" />
       </div>
@@ -39,7 +39,7 @@ export function ProjectCard({ demo, description, name, stack, image }: Props) {
         <div className={`flex flex-row ${footerBorder} w-full pt-4 text-white`}>
           <div className="flex flex-row flex-1 items-center">
             {stack.map((tech) => {
-              return <img src={`/svgs/${tech}logo.svg`} className="w-8 h-8 mr-4" />;
+              return <img src={`/svgs/${tech}logo.svg`} className="w-8 h-8 mr-4" title={tech} />;
             })}
           </div>
           <div className="flex flex-row items-center justify-center">
