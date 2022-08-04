@@ -38,25 +38,27 @@ export default function ChalengeSection() {
   return (
     <section className="flex flex-col w-full items-center min-h-[400px] px-16">
       <SectionTitle title="Desafios Recentes" className="my-8" />
-
-      {loading ? (
-        <div className="flex flex-1 items-center">
-          <CircleNotch className="animate-spin" size={32} color="#fff" />
-        </div>
-      ) : (
-        data?.challenges.map((challenge) => {
-          return (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 min-h-[250px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 min-h-[250px]">
+        {loading ? (
+          <>
+            <CircleNotch className="animate-spin" size={32} color="#fff" />
+            <CircleNotch className="animate-spin" size={32} color="#fff" />
+            <CircleNotch className="animate-spin" size={32} color="#fff" />
+            <CircleNotch className="animate-spin" size={32} color="#fff" />
+          </>
+        ) : (
+          data?.challenges.map((challenge) => {
+            return (
               <Challenge
                 key={challenge.id}
                 title={challenge.title}
                 desc={challenge.description}
                 url={challenge.url}
               />
-            </div>
-          );
-        })
-      )}
+            );
+          })
+        )}
+      </div>
     </section>
   );
 }
