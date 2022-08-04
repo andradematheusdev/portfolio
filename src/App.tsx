@@ -7,6 +7,7 @@ import SkillsSection from "./sections/SkillsSection";
 import ProjectsSection from "./sections/ProjectsSection";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "./libs/apollo";
+import ChalengeSection from "./sections/ChalengeSection";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <AboutMeSection />
           <SkillsSection />
           <ProjectsSection />
+          <ChalengeSection />
         </ApolloProvider>
       </main>
       <Footer />
