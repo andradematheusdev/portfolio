@@ -19,7 +19,7 @@ export default function AboutMeSection() {
               <CaretRight size={18} className="mr-2 hidden lg:inline" />
               <ReactTypingEffect
                 staticText="DESENVOLVEDOR FRONT-END COM"
-                text={["REACT", "TYPESCRIPT", "TAILWIND"]}
+                text={["REACT", "TYPESCRIPT", "TAILWIND", "SASS", "BOOTSTRAP"]}
                 speed={50}
                 typingDelay={10}
                 eraseSpeed={10}
