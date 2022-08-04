@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import { CircleNotch } from "phosphor-react";
 import Challenge from "../components/Challenges/Challenge";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
 
@@ -23,26 +24,39 @@ export default function ChalengeSection() {
 
   const { data, loading } = useQuery<{ challenges: Challenges[] }>(GET_CHALLENGES_QUERY);
 
-  const datac = {
-    title: "CodeLândia01",
-    url: "#",
-    desc: "Desafio 01 - Construir o front-end de um blog responsivo. Aproveitei a oportunidade para deixar o blog funcional e praticar requisições ao CMS com GraphQL.",
-  };
+  if (!data || !data.challenges) {
+    return (
+      <section className="flex flex-col w-full items-center min-h-[400px] px-16">
+        <SectionTitle title="Desafios Recentes" className="my-8" />
+        <div className="flex flex-1 justify-center w-full">
+          <span className="text-white">Ops... Não foi possivel carregar o conteúdo 😞</span>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="flex flex-col w-full items-center min-h-[400px] px-16">
       <SectionTitle title="Desafios Recentes" className="my-8" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 min-h-[250px]">
-        {data?.challenges.map((challenge) => {
+
+      {loading ? (
+        <div className="flex flex-1 items-center">
+          <CircleNotch className="animate-spin" size={32} color="#fff" />
+        </div>
+      ) : (
+        data?.challenges.map((challenge) => {
           return (
-            <Challenge
-              key={challenge.id}
-              title={challenge.title}
-              desc={challenge.description}
-              url={challenge.url}
-            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 min-h-[250px]">
+              <Challenge
+                key={challenge.id}
+                title={challenge.title}
+                desc={challenge.description}
+                url={challenge.url}
+              />
+            </div>
           );
-        })}
-      </div>
+        })
+      )}
     </section>
   );
 }
