@@ -46,16 +46,6 @@ export default function MobileMenu() {
             <GithubLogo size={32} />
           </span>
         </a>
-
-        <a
-          href="https://discord.gg/BYZ8pET"
-          className="text-white flex flex-1 items-center justify-center px-6"
-          target={"_blank"}
-        >
-          <span className="">
-            <DiscordLogo size={32} />
-          </span>
-        </a>
       </div>
       <div className="link border-none px-4" onClick={handleClick}>
         <Button text="ENVIAR E-MAIL" className="border rounded-full w-full" />
