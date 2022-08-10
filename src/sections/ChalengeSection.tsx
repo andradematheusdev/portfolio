@@ -36,7 +36,7 @@ export default function ChalengeSection() {
   }
 
   return (
-    <section className="flex flex-col w-full items-center min-h-[400px] px-16">
+    <section className="flex flex-col w-full items-center min-h-[400px] px-16 pb-16">
       <SectionTitle title="Desafios Recentes" className="my-8" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16 min-h-[250px]">
         {loading ? (
