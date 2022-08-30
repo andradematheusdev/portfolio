@@ -68,17 +68,6 @@ export default function Header() {
             </a>
           </div>
           <div>
-            <a
-              href="https://discord.gg/BYZ8pET"
-              className="text-white flex flex-1 items-center justify-center px-6"
-              target={"_blank"}
-            >
-              <span className="header-icon">
-                <DiscordLogo />
-              </span>
-            </a>
-          </div>
-          <div>
             <Button
               text="ENVIAR E-MAIL"
               className="text-white border border-white hover:border-violet-700 transition-colors ml-2 hover:bg-header-icon-bg-hover leading-none"

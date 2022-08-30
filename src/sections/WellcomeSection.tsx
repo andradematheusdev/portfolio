@@ -13,14 +13,14 @@ export default function WellcomeSection() {
         <div className="flex flex-row w-full space-x-2 justify-center lg:justify-start">
           <Button
             text="GitHub"
-            className="bg-violet-700 text-white hover:bg-violet-900 w-full md:w-5/12 lg:w-3/12"
+            className="bg-violet-700 text-white hover:bg-violet-900 w-full md:w-5/12 lg:w-2/12"
             url="https://github.com/Heloriel"
             blank
           />
 
           <Button
             text="LinkedIn"
-            className="bg-none border-2 border-violet-700 text-white hover:bg-violet-700 hover:text-white w-full md:w-5/12 lg:w-3/12"
+            className="bg-none border-2 border-violet-700 text-white hover:bg-violet-700 hover:text-white w-full md:w-5/12 lg:w-2/12"
             url="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
             blank
           />
