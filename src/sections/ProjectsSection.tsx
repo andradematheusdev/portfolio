@@ -11,6 +11,7 @@ interface Projects {
   image: {
     url: string;
   };
+  figma: string;
 }
 
 export default function ProjectsSection() {
@@ -25,6 +26,7 @@ export default function ProjectsSection() {
         image {
           url
         }
+        figma
       }
     }
   `;
@@ -35,8 +37,7 @@ export default function ProjectsSection() {
     return (
       <section id="projects" className="projects-section px-4 lg:px-10">
         <SectionTitle title="projetos" className="text-lg my-16" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full min-h-[350px]">
-          <ProjectCardLoading />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           <ProjectCardLoading />
           <ProjectCardLoading />
           <ProjectCardLoading />
@@ -56,7 +57,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="projects-section px-4 lg:px-10">
       <SectionTitle title="projetos" className="text-lg my-16" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {data.projects.map((project) => {
           return (
             <ProjectCard
@@ -66,6 +67,7 @@ export default function ProjectsSection() {
               name={project.name}
               stack={project.stack}
               image={{ url: project.image.url }}
+              figma={project.figma}
             />
           );
         })}

@@ -1,5 +1,6 @@
 import { CircleNotch } from "phosphor-react";
 import Button from "../Button/Button";
+import FigmaLink from "../FigmaLink/FigmaLink";
 
 type Props = {
   name: string;
@@ -9,25 +10,27 @@ type Props = {
   image: {
     url: string;
   };
+  figma: string;
 };
 
 export function ProjectCardLoading() {
   return (
-    <div className="flex flex-col w-full items-center justify-center bg-zinc-800 rounded-xl overflow-hidden">
+    <div className="flex flex-col items-center justify-center bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[325px] max-w-[325px]">
       <CircleNotch size={32} className="animate-spin" color="#fff" />
     </div>
   );
 }
 
-export function ProjectCard({ demo, description, name, stack, image }: Props) {
+export function ProjectCard({ demo, description, name, stack, image, figma }: Props) {
   let footerBorder = "border-none";
   if (stack.length != 0 || demo) {
     footerBorder = "border-t border-zinc-700";
   }
   return (
-    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px]">
-      <div className="flex w-full h-48 overflow-hidden">
+    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[270px] max-w-[325px]">
+      <div className="flex w-full h-48 overflow-hidden relative">
         <img src={image.url} className="w-full object-cover object-center" />
+        {figma && <FigmaLink url={figma} />}
       </div>
       <div className="flex w-full p-2 text-xl font-bold justify-center text-white py-4">
         <span>{name}</span>
@@ -43,16 +46,14 @@ export function ProjectCard({ demo, description, name, stack, image }: Props) {
             })}
           </div>
           <div className="flex flex-row items-center justify-center">
-            {demo ? (
+            {demo && (
               <Button
                 text="DEMO"
                 className="bg-violet-500 text-white rounded px-8 hover:bg-violet-600 transition-colors"
                 url={demo}
                 blank
               />
-            ) : (
-              <></>
-            )}
+            ) }
           </div>
         </div>
       </div>
