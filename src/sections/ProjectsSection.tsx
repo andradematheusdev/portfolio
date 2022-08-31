@@ -12,6 +12,7 @@ interface Projects {
     url: string;
   };
   figma: string;
+  repo: string;
 }
 
 export default function ProjectsSection() {
@@ -27,6 +28,7 @@ export default function ProjectsSection() {
           url
         }
         figma
+        repo
       }
     }
   `;
@@ -68,6 +70,7 @@ export default function ProjectsSection() {
               stack={project.stack}
               image={{ url: project.image.url }}
               figma={project.figma}
+              repo={project.repo}
             />
           );
         })}

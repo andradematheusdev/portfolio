@@ -11,6 +11,7 @@ type Props = {
     url: string;
   };
   figma: string;
+  repo: string;
 };
 
 export function ProjectCardLoading() {
@@ -21,11 +22,7 @@ export function ProjectCardLoading() {
   );
 }
 
-export function ProjectCard({ demo, description, name, stack, image, figma }: Props) {
-  let footerBorder = "border-none";
-  if (stack.length != 0 || demo) {
-    footerBorder = "border-t border-zinc-700";
-  }
+export function ProjectCard({ demo, description, name, stack, image, figma, repo }: Props) {
   return (
     <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[270px] max-w-[325px]">
       <div className="flex w-full h-48 overflow-hidden relative">
@@ -39,24 +36,34 @@ export function ProjectCard({ demo, description, name, stack, image, figma }: Pr
         <span className="text-justify text-white text-md">{description}</span>
       </div>
       <div className="flex w-full p-4 text-sm">
-        <div className={`flex flex-row ${footerBorder} w-full pt-4 text-white`}>
-          <div className="flex flex-row flex-1 items-center">
+        <div className={`grid grid-rows-1 grid-cols-6 w-full pt-4 text-white`}>
             {stack.map((tech) => {
               return <img src={`/svgs/${tech}logo.svg`} className="w-8 h-8 mr-4" title={tech} />;
             })}
-          </div>
-          <div className="flex flex-row items-center justify-center">
+        </div>
+      </div>
+      <div className={`flex w-full px-4  text-sm space-x-2`}>
+          {repo && (
+          <div className="flex-1 mb-4">
+              <Button
+                text="REPO"
+                className="bg-transparent border border-violet-500 text-white rounded px-8 hover:bg-violet-600 hover:border-violet-600 transition-colors"
+                url={repo}
+                blank
+              />
+          </div>          
+            ) }
             {demo && (
+              <div className="flex-1 mb-4">
               <Button
                 text="DEMO"
-                className="bg-violet-500 text-white rounded px-8 hover:bg-violet-600 transition-colors"
+                className="bg-violet-500 border border-violet-500 text-white rounded px-8 hover:bg-violet-600 hover:border-violet-600 transition-colors"
                 url={demo}
                 blank
               />
+            </div>
             ) }
           </div>
-        </div>
-      </div>
     </div>
   );
 }
