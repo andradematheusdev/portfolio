@@ -1,6 +1,8 @@
 import classNames from "classnames";
 
 type Props = {
+    name?: string;
+    id?: string;
     children?: string;
     rows?: number;
     cols?: number;
@@ -9,9 +11,11 @@ type Props = {
     noResize?: boolean;
 }
 
-export default function TextArea({children, className, cols = 1, rows, noResize = false, placeHolder}: Props) {
+export default function TextArea({children, className, cols = 1, rows, noResize = false, placeHolder, name, id}: Props) {
   return (
     <textarea
+        name={name}
+        id={id}
         rows={rows}
         cols={cols}
         placeholder={placeHolder}
