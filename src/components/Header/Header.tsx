@@ -46,6 +46,11 @@ export default function Header() {
             </a>
           </div>
           <div>
+            <a href="#contact" className="hover:text-violet-700">
+              CONTATO
+            </a>
+          </div>
+          <div>
             <a
               href="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
               className="text-white flex flex-1 items-center justify-center px-6"
