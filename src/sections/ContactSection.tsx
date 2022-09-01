@@ -12,7 +12,7 @@ export default function ContactSection() {
             <TextInput placeHolder={"Telefone"} type={"tel"} className="my-2" id="tel" name="tel"  />
             <TextInput placeHolder={"E-mail"} type={"email"} className="my-2" id="mail" name="mail" />
             <TextArea placeHolder="Mensagem..." className="my-2" noResize rows={8} id="msg" name="msg"></TextArea>
-            <SubmitButton text="Enviar" className="bg-violet-500 rounded my-2 hover:bg-violet-600 text-white" />
+            <SubmitButton text="Enviar" className="bg-violet-500 my-2 hover:bg-violet-600 text-white" />
         </form>
     </section>
   )

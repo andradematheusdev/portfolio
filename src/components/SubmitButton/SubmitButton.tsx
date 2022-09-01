@@ -7,7 +7,7 @@ type Props = {
   export default function SubmitButton({className, children, text}: Props) {
     return (
       <button
-        className={`flex items-center justify-center text-center px-4 py-2 rounded-full transition-colors whitespace-nowrap ${className}`}
+        className={`flex items-center justify-center text-center px-4 py-2 rounded transition-colors whitespace-nowrap ${className}`}
       >
         {text ?? children}
       </button>
