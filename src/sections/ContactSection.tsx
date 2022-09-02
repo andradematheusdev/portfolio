@@ -5,7 +5,7 @@ import TextArea from "../components/TextArea/TextArea";
 
 export default function ContactSection() {
   return (
-    <section className="flex flex-col items-center justify-center pb-16 px-8 md:px-0" id="contact">
+    <section className="flex flex-col items-center justify-center pb-16 px-8 md:px-0 min-h-screen" id="contact">
         <SectionTitle title="Contato" className="mb-4"/>
         <form method="POST" action="https://api.slapform.com/XZZYUhtKj" className="flex flex-col w-full md:w-8/12 lg:w-4/12">
             <TextInput placeHolder={"Nome"} className="my-2" id="nome" name="nome" />
