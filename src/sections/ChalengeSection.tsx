@@ -14,7 +14,7 @@ interface Challenges {
 export default function ChalengeSection() {
   const GET_CHALLENGES_QUERY = gql`
     query ChallengeQuery {
-      challenges(first: 4, orderBy: publishedAt_ASC) {
+      challenges(first: 4, orderBy: publishedAt_DESC) {
         id
         title
         url
