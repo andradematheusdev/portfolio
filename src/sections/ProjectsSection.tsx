@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { ProjectCard, ProjectCardLoading } from "../components/ProjectCard/ProjectCard";
 import SectionTitle from "../components/SectionTitle/SectionTitle";
+import ViewMore from "../components/ViewMore/ViewMore";
 
 interface Projects {
   id: string;
@@ -18,7 +19,7 @@ interface Projects {
 export default function ProjectsSection() {
   const GET_PROJECTS_QUERY = gql`
     query GetProjects {
-      projects(first: 50, orderBy: order_ASC) {
+      projects(first: 10, orderBy: order_ASC) {
         demo
         description
         id
@@ -58,8 +59,13 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="projects-section px-4 lg:px-10">
-      <SectionTitle title="projetos" className="text-lg my-16" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="flex w-full items-center px-16">
+        <SectionTitle title="projetos" className="text-lg my-16 flex-1" />
+        <div className="flex-1 flex justify-end">
+          <ViewMore url={"#"} className="text-white hover:text-neutral-300 transition-colors" />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {data.projects.map((project) => {
           return (
             <ProjectCard
