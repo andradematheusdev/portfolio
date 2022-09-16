@@ -23,8 +23,11 @@ export default function MobileMenu() {
       <a href="#skills" className="link" onClick={handleClick}>
         CONHECIMENTOS
       </a>
-      <a href="#projects" className="link last" onClick={handleClick}>
+      <a href="#projects" className="link" onClick={handleClick}>
         PROJETOS
+      </a>
+      <a href="#contact" className="link last" onClick={handleClick}>
+        CONTATO
       </a>
       <div className="flex flex-row border-b border-zinc-700">
         <a
