@@ -1,7 +1,16 @@
 import { CaretRight } from "phosphor-react";
 
-export function ArrowRight() {
+type Props = {
+  listRef: React.RefObject<HTMLInputElement>;
+}
+
+export function ArrowRight({listRef}: Props) {
+  function handleClick(){
+    listRef.current ? listRef.current.scrollLeft += 341 : null;
+    console.log(listRef.current?.scrollLeft);
+  }
+
   return (
-    <a role={"button"} className="flex items-center absolute right-0"><CaretRight size={24} color="#fff" /></a>
+    <a role={"button"} className="flex items-center absolute right-0"><CaretRight size={24} color="#fff" onClick={() => handleClick()}/></a>
   )
 }

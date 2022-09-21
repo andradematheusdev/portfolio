@@ -2,7 +2,7 @@ import { ProjectCard } from "../ProjectCard/ProjectCard";
 import { ArrowRight } from "../ProjectsNavigation/ArrowRight";
 import { ArrowLeft } from "../ProjectsNavigation/ArrowLeft";
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Projects = {
     id: string;
@@ -29,11 +29,13 @@ export default function ProjectsList({data}: Props){
     const isOverflowing = el!.scrollWidth > el!.clientWidth;
     setIsOverflowing(isOverflowing);
   },[]);
+  
+  const listRef = useRef(null);
 
   return (
     <div className="flex w-full relative items-center">
-    <ArrowLeft />
-    <div className={classNames(`flex w-full gap-x-4 overflow-x-scroll pb-8 px-4`, {"justify-center": !isOverflowing})} id="plContainer" >
+    {isOverflowing && <ArrowLeft listRef={listRef} />}
+    <div className={classNames(`flex w-full gap-x-4 overflow-x-scroll pb-8 scroll-smooth`, {"justify-center": !isOverflowing})} id="plContainer" ref={listRef} >
         {data.map((project) => {
           return (
             <ProjectCard
@@ -49,7 +51,7 @@ export default function ProjectsList({data}: Props){
             );
           })}
     </div>
-    <ArrowRight />
+    {isOverflowing && <ArrowRight listRef={listRef}/>}
     </div>
   )
 }
