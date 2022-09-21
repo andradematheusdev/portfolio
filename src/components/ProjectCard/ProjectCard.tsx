@@ -24,7 +24,7 @@ export function ProjectCardLoading() {
 
 export function ProjectCard({ demo, description, name, stack, image, figma, repo }: Props) {
   return (
-    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[270px] max-w-[325px]">
+    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[325px] max-w-[325px]">
       <div className="flex w-full h-48 overflow-hidden relative">
         <img src={image.url} className="w-full object-cover object-center" />
         {figma && <FigmaLink url={figma} />}
@@ -38,7 +38,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
       <div className="flex w-full p-4 text-sm">
         <div className={`grid grid-rows-1 grid-cols-6 w-full pt-4 text-white`}>
             {stack.map((tech) => {
-              return <img src={`/svgs/${tech}logo.svg`} className="w-8 h-8 mr-4" title={tech} />;
+              return <img src={`/svgs/${tech}logo.svg`} className="w-8 h-8 mr-4" title={tech} key={tech.length + 1} />;
             })}
         </div>
       </div>
