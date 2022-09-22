@@ -7,7 +7,6 @@ type Props = {
 export function ArrowRight({listRef}: Props) {
   function handleClick(){
     listRef.current ? listRef.current.scrollLeft += 341 : null;
-    console.log(listRef.current?.scrollLeft);
   }
 
   return (
