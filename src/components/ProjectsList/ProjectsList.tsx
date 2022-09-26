@@ -35,7 +35,7 @@ export default function ProjectsList({data}: Props){
   return (
     <div className="flex w-full relative items-center">
     {isOverflowing && <ArrowLeft listRef={listRef} />}
-    <div className={classNames(`flex w-full gap-x-4 overflow-x-scroll pb-8 scroll-smooth`, {"justify-center": !isOverflowing})} id="plContainer" ref={listRef} >
+    <div className={classNames(`flex w-full gap-x-4 overflow-x-auto pb-8 scroll-smooth`, {"justify-center": !isOverflowing})} id="plContainer" ref={listRef} >
         {data.map((project) => {
           return (
             <ProjectCard
