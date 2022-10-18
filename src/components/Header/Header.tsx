@@ -63,7 +63,7 @@ export default function Header() {
           </div>
           <div>
             <a
-              href="https://github.com/Heloriel"
+              href="https://github.com/andradematheusdev"
               className="text-white flex flex-1 items-center justify-center px-6"
               target={"_blank"}
             >
