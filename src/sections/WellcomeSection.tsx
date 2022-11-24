@@ -14,7 +14,7 @@ export default function WellcomeSection() {
           <Button
             text="GitHub"
             className="bg-violet-700 text-white hover:bg-violet-900 w-full md:w-5/12 lg:w-2/12"
-            url="https://github.com/Heloriel"
+            url="https://github.com/andradematheusdev"
             blank
           />
 
