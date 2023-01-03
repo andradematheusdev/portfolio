@@ -7,7 +7,7 @@ html {
   @apply font-open-sans;
 }
 
-body {
+html, body {
   @apply bg-zinc-900;
 }
 

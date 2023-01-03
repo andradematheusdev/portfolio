@@ -1,6 +1,6 @@
 import Logo from "../Logo";
 
-import { DiscordLogo, LinkedinLogo, GithubLogo } from "phosphor-react";
+import { LinkedinLogo, GithubLogo } from "phosphor-react";
 import Button from "../Button/Button";
 import { useEffect, useState } from "react";
 import MobileMenuToggle from "../MobileMenuToggle/MobileMenuToggle";
@@ -20,9 +20,7 @@ export default function Header() {
     <>
       <header className={`my-header z-40 ${scrollClasses}`}>
         <div>
-          <a href="#home">
-            <Logo className="fill-white" />
-          </a>
+          <Logo className="fill-white" />
         </div>
         <div className="hidden lg:flex h-full items-center justify-center">
           <div>
