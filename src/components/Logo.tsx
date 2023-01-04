@@ -1,10 +1,11 @@
 type Props = {
   className: string;
+  url?: string;
 };
 
-function Logo({ className }: Props) {
+function Logo({ className, url = "/" }: Props) {
   return (
-    <a href="/">
+    <a href={url}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="200"
