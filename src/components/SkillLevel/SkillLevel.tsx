@@ -6,7 +6,7 @@ type Props = {
 
 export default function SkillLevel({ level }: Props) {
   const rating = [];
-  const knowledge = ["INICIANTE", "BÁSICO", "RAZOÁVEL", "BOM", "SÓLIDO"];
+  const knowledge = ["INICIANTE", "BÁSICO", "RAZOÁVEL", "BOM", "PROFICIENTE"];
 
   for (let i = 0; i < level; i++) {
     rating.push(<Star size={22} weight="fill" color="#fff" />);
