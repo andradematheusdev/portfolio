@@ -64,3 +64,25 @@ html, body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* CUSTOM SCROLL BAR*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  @apply bg-neutral-900
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-800;
+}
