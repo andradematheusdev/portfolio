@@ -59,7 +59,7 @@ if (!data || !data.projects) {
   return (
     <>
       <SmallHeader />
-      <main className="flex flex-col w-full items-center justify-center">
+      <main className="flex flex-col w-full items-center justify-center p-8">
         <ProjectsListFull data={data.projects} />
       </main>
       <Footer />
