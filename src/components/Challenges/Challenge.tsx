@@ -10,7 +10,7 @@ export default function Challenge({ title, url, desc }: Props) {
       href={url}
       className="
         flex flex-col flex-1 rounded-lg overflow-hidden items-center justify-center hover:scale-110 transition-transform
-        bg-[url('/images/bg.jpg')] bg-no-repeat bg-center bg-cover min-h-[150px]
+        bg-[url('/images/bg.jpg')] bg-no-repeat bg-center bg-cover min-h-[150px] p-2
       "
       target={"_blank"}
     >
