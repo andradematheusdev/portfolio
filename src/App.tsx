@@ -2,7 +2,7 @@ import { ApolloProvider } from '@apollo/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import MenuContext from './contexts/MobileMenuContext';
 import { client } from './libs/apollo';
-import Index from './pages';
+import Index from './pages/Index';
 import Projects from './pages/Projects';
 
 function App() {
