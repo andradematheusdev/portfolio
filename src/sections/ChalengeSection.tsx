@@ -9,6 +9,9 @@ interface Challenges {
   title: string;
   description: string;
   url: string;
+  image: {
+    url: string;
+  }
 }
 
 export default function ChalengeSection() {
@@ -19,6 +22,9 @@ export default function ChalengeSection() {
         title
         url
         description
+        image {
+          url
+        }
       }
     }
   `;
@@ -39,7 +45,7 @@ export default function ChalengeSection() {
   return (
     <section className="flex flex-col w-full items-center min-h-[400px] px-8 md:px-16 pb-16">
       <SectionTitle title="Desafios Recentes" className="my-8" />
-      <div className={classNames("grid grid-cols-1", {"sm:grid-cols-2 lg:grid-cols-4 gap-16 min-h-[150px]": !loading})}>
+      <div className={classNames("grid grid-cols-1 items-start", {"sm:grid-cols-2 lg:grid-cols-4 gap-16 min-h-[150px]": !loading})}>
         {loading ? (
             <CircleNotch className="animate-spin" size={32} color="#fff" />
         ) : (
@@ -50,6 +56,7 @@ export default function ChalengeSection() {
                 title={challenge.title}
                 desc={challenge.description}
                 url={challenge.url}
+                image={challenge.image}
               />
             );
           })
