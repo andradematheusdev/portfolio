@@ -1,12 +1,14 @@
+import { useEffect, useState } from "react";
+
 import Logo from "../Logo";
 
 import { LinkedinLogo, GithubLogo } from "phosphor-react";
+
 import Button from "../Button/Button";
-import { useEffect, useState } from "react";
 import MobileMenuToggle from "../MobileMenuToggle/MobileMenuToggle";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
-export default function Header() {
+export const Header = () => {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
