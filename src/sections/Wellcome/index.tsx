@@ -1,6 +1,6 @@
-import Button from "../components/Button/Button";
+import Button from "../../components/Button/Button";
 
-export default function WellcomeSection() {
+export const Wellcome = () => {
   return (
     <section id="home" className="wellcome-section">
       <div className="flex flex-col flex-1 px-6 mt-16 lg:px-20 max-w-full lg:items-start items-center">
