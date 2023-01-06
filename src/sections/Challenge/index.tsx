@@ -1,8 +1,8 @@
 import { gql, useQuery } from "@apollo/client";
 import classNames from "classnames";
 import { CircleNotch } from "phosphor-react";
-import Challenge from "../components/Challenges/Challenge";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
+import Challenge from "../../components/Challenges/Challenge";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 interface Challenges {
   id: string;
@@ -14,7 +14,7 @@ interface Challenges {
   }
 }
 
-export default function ChalengeSection() {
+export const Challenges = () => {
   const GET_CHALLENGES_QUERY = gql`
     query ChallengeQuery {
       challenges(first: 4, orderBy: publishedAt_DESC) {

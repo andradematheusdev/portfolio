@@ -1,11 +1,10 @@
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import AboutMeSection from "../../sections/AboutMeSection";
-import ChalengeSection from "../../sections/ChalengeSection";
 import ContactSection from "../../sections/ContactSection";
 import ProjectsSection from "../../sections/ProjectsSection";
 import SkillsSection from "../../sections/SkillsSection";
-import { Wellcome } from '../../sections/'
+import { Wellcome, Challenges } from '../../sections/'
 
 export const Home = () => {
   return (
@@ -16,7 +15,7 @@ export const Home = () => {
         <AboutMeSection />
         <SkillsSection />
         <ProjectsSection />
-        <ChalengeSection />
+        <Challenges />
         <ContactSection />
       </main>
       <Footer />
