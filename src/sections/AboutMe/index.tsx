@@ -1,8 +1,8 @@
-import SectionTitle from "../components/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import ReactTypingEffect from "react-typing-effect";
 import { CaretRight } from "phosphor-react";
 
-export default function AboutMeSection() {
+export const AboutMe = () => {
   return (
     <section id="about" className="about-section">
       <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2">

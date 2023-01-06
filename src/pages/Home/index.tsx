@@ -1,10 +1,6 @@
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import AboutMeSection from "../../sections/AboutMeSection";
-import ContactSection from "../../sections/ContactSection";
-import ProjectsSection from "../../sections/ProjectsSection";
-import SkillsSection from "../../sections/SkillsSection";
-import { Wellcome, Challenges } from '../../sections/'
+import { Wellcome, Challenges, Contact, Projects, AboutMe, Skills } from '../../sections/'
 
 export const Home = () => {
   return (
@@ -12,11 +8,11 @@ export const Home = () => {
       <Header />
       <main className="flex flex-col w-full">
         <Wellcome />
-        <AboutMeSection />
-        <SkillsSection />
-        <ProjectsSection />
+        <AboutMe />
+        <Skills />
+        <Projects />
         <Challenges />
-        <ContactSection />
+        <Contact />
       </main>
       <Footer />
     </>

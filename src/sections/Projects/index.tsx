@@ -1,8 +1,8 @@
-import ProjectsList from "../components/ProjectsList/ProjectsList";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
-import ViewMore from "../components/ViewMore/ViewMore";
+import ProjectsList from "../../components/ProjectsList/ProjectsList";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import ViewMore from "../../components/ViewMore/ViewMore";
 import { gql, useQuery } from "@apollo/client";
-import { ProjectCardLoading } from "../components/ProjectCard/ProjectCard";
+import { ProjectCardLoading } from "../../components/ProjectCard/ProjectCard";
 import classNames from "classnames";
 
 interface Projects {
@@ -19,7 +19,7 @@ interface Projects {
 }
 
 
-export default function ProjectsSection() {
+export const Projects = () => {
     
   const GET_PROJECTS_QUERY = gql`
   query GetProjects {

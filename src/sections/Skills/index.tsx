@@ -1,12 +1,12 @@
 import { gql, useQuery } from "@apollo/client";
 import { useState } from "react";
 
-import SectionTitle from "../components/SectionTitle/SectionTitle";
-import { SkillBlock, SkillBlockLoading } from "../components/SkillBlock/SkillBlock";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import { SkillBlock, SkillBlockLoading } from "../../components/SkillBlock/SkillBlock";
 import {
   SkillDescription,
   SkillDescriptionLoading,
-} from "../components/SkillDescription/SkillDescription";
+} from "../../components/SkillDescription/SkillDescription";
 
 interface Skills {
   id: string;
@@ -59,7 +59,7 @@ function SkillsFailOrEmpty() {
   );
 }
 
-export default function SkillsSection() {
+export const Skills = () => {
   const GET_SKILLS_QUERY = gql`
     query GetSkills {
       skills(orderBy: order_ASC, first: 30) {

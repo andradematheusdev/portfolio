@@ -1,9 +1,9 @@
-import TextInput from "../components/Input/Input";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
-import SubmitButton from "../components/SubmitButton/SubmitButton";
-import TextArea from "../components/TextArea/TextArea";
+import TextInput from "../../components/Input/Input";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import SubmitButton from "../../components/SubmitButton/SubmitButton";
+import TextArea from "../../components/TextArea/TextArea";
 
-export default function ContactSection() {
+export const Contact = () => {
   return (
     <section className="flex flex-col items-center justify-center pb-16 px-8 md:px-0 min-h-screen" id="contact">
         <SectionTitle title="Contato" className="mb-4"/>
