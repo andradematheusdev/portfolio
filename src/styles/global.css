@@ -55,6 +55,13 @@ html, body {
   @apply border-b border-zinc-700;
 }
 
+.challenge{
+  background: linear-gradient(
+    rgba(255,255,255,0.1),
+    rgba(0,0,0,1)
+  );
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

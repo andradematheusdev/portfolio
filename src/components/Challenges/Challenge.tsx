@@ -12,18 +12,25 @@ export default function Challenge({ title, url, desc, image }: Props) {
     <a
       href={url}
       className={`
-        flex flex-col flex-1 rounded-lg overflow-hidden items-center justify-center hover:scale-105
-        transition-transform min-h-[150px] p-2
+        flex flex-col flex-1 rounded-lg overflow-hidden items-center justify-end
+        min-h-[100px] relative hover:scale-105 transition-transform
       `}
       target={"_blank"}
     >
       <img
         src={image.url}
         alt="challenge background"
-        className="object-cover rounded-lg overflow-hidden mb-4"
+        className="object-cover rounded-lg overflow-hidden"
       />
-      <span className="text-white font-bold text-lg">{title}</span>
-      <span className="text-white text-center">{desc}</span>
+      <div className="w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0)] to-[rgba(0,0,0,0.8)] absolute">
+        <p
+          className="inline-block w-full text-center text-white font-bold text-lg absolute bottom-2"
+        >
+          {title}
+          <br />
+          <span className="text-sm font-normal">{desc}</span>
+        </p>
+      </div>
     </a>
   );
 }
