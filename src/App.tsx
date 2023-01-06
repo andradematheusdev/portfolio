@@ -2,14 +2,14 @@ import { ApolloProvider } from '@apollo/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import MenuContext from './contexts/MobileMenuContext';
 import { client } from './libs/apollo';
-import Index from './pages/Index';
+import { Home } from './pages/Home';
 import Projects from './pages/Projects';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Index />
+      element: <Home />
     },
     {
       path: '/projects',
