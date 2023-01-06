@@ -1,8 +1,8 @@
 import { gql, useQuery } from "@apollo/client";
-import Footer from "../components/Footer/Footer";
-import { ProjectCardLoading } from "../components/ProjectCard/ProjectCard";
-import ProjectsListFull from "../components/ProjectListFull/ProjectListFull";
-import SmallHeader from "../components/SmallHeader/SmallHeader";
+import Footer from "../../components/Footer/Footer";
+import { ProjectCardLoading } from "../../components/ProjectCard/ProjectCard";
+import ProjectsListFull from "../../components/ProjectListFull/ProjectListFull";
+import SmallHeader from "../../components/SmallHeader/SmallHeader";
 
 interface Projects {
   id: string;
@@ -17,7 +17,7 @@ interface Projects {
   repo: string;
 }
 
-const Projects = () => {
+export const Projects = () => {
 
   const GET_PROJECTS_QUERY = gql`
   query GetProjects {
@@ -66,5 +66,3 @@ if (!data || !data.projects) {
     </>
   )
 }
-
-export default Projects;
