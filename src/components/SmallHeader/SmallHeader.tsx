@@ -1,4 +1,4 @@
-import BackButton from "../BackButton/BackButton";
+import { BackButton } from '../BackButton';
 import Logo from "../Logo";
 
 export default function Header() {

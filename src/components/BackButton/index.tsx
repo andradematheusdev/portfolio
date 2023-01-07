@@ -1,7 +1,7 @@
 import { CaretLeft } from "phosphor-react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
-const BackButton = () => {
+export const BackButton = () => {
   const navigate = useNavigate();
 
   return (
@@ -10,5 +10,3 @@ const BackButton = () => {
     </a>
   )
 }
-
-export default BackButton
