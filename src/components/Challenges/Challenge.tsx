@@ -13,7 +13,7 @@ export default function Challenge({ title, url, desc, image }: Props) {
       href={url}
       className={`
         flex flex-col flex-1 rounded-2xl overflow-hidden items-center justify-end
-        min-h-[100px] relative hover:scale-105 transition-transform
+        min-h-[100px] relative hover:scale-105 transition-transform min-w-[230px]
       `}
       target={"_blank"}
     >
