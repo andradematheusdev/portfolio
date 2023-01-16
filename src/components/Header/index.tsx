@@ -45,7 +45,7 @@ export const Header = () => {
           <LanguageSelector />
         </div>
         
-        <div className="flex lg:hidden">
+        <div className="ml-4 flex lg:hidden">
           <MobileMenuToggle />
         </div>
       </header>

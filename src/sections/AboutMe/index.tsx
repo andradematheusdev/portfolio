@@ -33,9 +33,10 @@ export const AboutMe = () => {
               graduando em Sistemas para Internet.
             </p>
             <p className="text-white text-justify sm:text-start">
-              Minha jornada na programação começou em 2013 quando comecei a trabalhar com
-              desenvolvimento php, hoje o foco dos meus estudos é em desenvolvimento front-end com
-              React e TypeScript.
+              Minha jornada na programação começou em 2013 quando trabalhei com
+              desenvolvimento em php, em 2015 comecei a trabalhar como Designer Gráfico e me aprofundando na área acabei
+              me apaixonando pelo desenvolvimento de front-end. <br /><br />
+              Hoje o foco dos meus estudos é em desenvolvimento com React e TypeScript.
             </p>
           </div>
         </div>
