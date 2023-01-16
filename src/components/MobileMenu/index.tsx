@@ -1,9 +1,9 @@
-import { DiscordLogo, GithubLogo, LinkedinLogo } from "phosphor-react";
+import { GithubLogo, LinkedinLogo } from "phosphor-react";
 import { useContext } from "react";
 import { Context, MenuContextType } from "../../contexts/MobileMenuContext";
 import Button from "../Button/Button";
 
-export default function MobileMenu() {
+export const MobileMenu = () => {
   const context = useContext<MenuContextType>(Context);
 
   function handleClick() {

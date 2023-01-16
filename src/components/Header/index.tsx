@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 
 import Logo from "../Logo";
 
-import { LinkedinLogo, GithubLogo } from "phosphor-react";
-
-import Button from "../Button/Button";
-import MobileMenuToggle from "../MobileMenuToggle/MobileMenuToggle";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import {
+  MobileMenuToggle,
+  MobileMenu,
+  LanguageSelector,
+} from '../';
 
 export const Header = () => {
   const [scroll, setScroll] = useState(false);
@@ -21,65 +21,30 @@ export const Header = () => {
   return (
     <>
       <header className={`my-header z-40 ${scrollClasses}`}>
-        <div>
+        <div className="w-64">
           <Logo className="fill-white" />
         </div>
-        <div className="hidden lg:flex h-full items-center justify-center">
-          <div>
-            <a href="#home" className="hover:text-violet-700">
-              INÍCIO
+        <nav className="hidden lg:flex flex-1 items-center justify-center gap-x-4 font-medium">
+            <a href="#home" className="hover:text-violet-700 transition-colors">
+              Início
             </a>
-          </div>
-          <div>
-            <a href="#about" className="hover:text-violet-700">
-              SOBRE
+            <a href="#about" className="hover:text-violet-700 transition-colors">
+              Sobre
             </a>
-          </div>
-          <div>
-            <a href="#skills" className="hover:text-violet-700">
-              CONHECIMENTOS
+            <a href="#skills" className="hover:text-violet-700 transition-colors">
+              Conhecimentos
             </a>
-          </div>
-          <div>
-            <a href="#projects" className="hover:text-violet-700">
-              PROJETOS
+            <a href="#projects" className="hover:text-violet-700 transition-colors">
+              Projetos
             </a>
-          </div>
-          <div>
-            <a href="#contact" className="hover:text-violet-700">
-              CONTATO
+            <a href="#contact" className="hover:text-violet-700 transition-colors">
+              Contato
             </a>
-          </div>
-          <div>
-            <a
-              href="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
-              className="text-white flex flex-1 items-center justify-center px-6"
-              target={"_blank"}
-            >
-              <span className="header-icon">
-                <LinkedinLogo />
-              </span>
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://github.com/andradematheusdev"
-              className="text-white flex flex-1 items-center justify-center px-6"
-              target={"_blank"}
-            >
-              <span className="header-icon">
-                <GithubLogo />
-              </span>
-            </a>
-          </div>
-          <div>
-            <Button
-              text="ENVIAR E-MAIL"
-              className="text-white border border-white hover:border-violet-700 transition-colors ml-2 hover:bg-header-icon-bg-hover leading-none"
-              url="mailto:andradematheus.dev@gmail.com"
-            />
-          </div>
+        </nav> 
+        <div className="w-64 text-right">
+          <LanguageSelector />
         </div>
+        
         <div className="flex lg:hidden">
           <MobileMenuToggle />
         </div>
