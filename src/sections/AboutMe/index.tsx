@@ -29,15 +29,23 @@ export const AboutMe = () => {
           </div>
           <div className="leading-relaxed space-y-6">
             <p className="text-white text-justify sm:text-start">
-              Tenho 27 anos, sou de Magé - RJ, estudo programação e estou me
+              Tenho 27 anos, sou de Magé - RJ, estudo programação por conta própria e estou me
               graduando em Sistemas para Internet.
             </p>
-            <p className="text-white text-justify sm:text-start">
-              Minha jornada na programação começou em 2013 quando trabalhei com
-              desenvolvimento em php, em 2015 comecei a trabalhar como Designer Gráfico e me aprofundando na área acabei
-              me apaixonando pelo desenvolvimento de front-end. <br /><br />
-              Hoje o foco dos meus estudos é em desenvolvimento com React e TypeScript.
+            <p className="text-justify sm:text-start">
+              Minha jornada na programação começou em 2013 quando comecei a estudar programção web com
+              desenvolvimento em php.
             </p>
+            <p className="text-justify sm:text-start">
+              Em 2015 comecei a trabalhar como Designer Gráfico.
+            </p>
+            <p className="text-justify sm:text-start">
+              Alinhando a experiência de 8 anos como Designer com meus estudos de programação percebi que o front-end
+              era a área certa para mim.
+            </p>
+            <p className="text-justify sm:text-start">
+              Hoje o foco dos meus estudos é em desenvolvimento com React e TypeScript.
+            </p>            
           </div>
         </div>
       </div>
