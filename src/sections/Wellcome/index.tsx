@@ -15,7 +15,7 @@ export const Wellcome = () => {
             Desenvolvedor Front-End focado em JavaScript
           </h1>
           <p className="max-w-[720px] text-center my-16">
-            Tenho 27 anos, estudo programação por conta própria, sou apaixonado por tecnologia e tenho muita facilidade para aprender coisas novas!          
+            Tenho 27 anos, sou apaixonado por tecnologia, estudo programação por conta própria a mais de 1 ano e tenho muita facilidade para aprender coisas novas!          
           </p>
         </div>
         <div className="flex flex-row w-full space-x-2 justify-center">
