@@ -2,7 +2,7 @@ import { List, X } from "phosphor-react";
 import { useContext } from "react";
 import { Context, MenuContextType } from "../../contexts/MobileMenuContext";
 
-export default function MobileMenuToggle() {
+export const MobileMenuToggle = () => {
   const context = useContext<MenuContextType>(Context);
 
   function handleToggle() {

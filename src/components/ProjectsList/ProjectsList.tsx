@@ -23,6 +23,7 @@ type Props = {
 
 export default function ProjectsList({data}: Props){
   const [isOverflowing, setIsOverflowing] = useState(false);
+  const defaultImage = '/images/skillsbg.jpg';
 
   useEffect(()=>{
     const el = document.getElementById("plContainer");
@@ -39,14 +40,14 @@ export default function ProjectsList({data}: Props){
         {data.map((project) => {
           return (
             <ProjectCard
-            key={project.id}
-            demo={project.demo}
-            description={project.description}
-            name={project.name}
-            stack={project.stack}
-            image={{ url: project.image.url }}
-            figma={project.figma}
-            repo={project.repo}
+              key={project.id}
+              demo={project.demo}
+              description={project.description}
+              name={project.name}
+              stack={project.stack}
+              image={{ url: project.image == null ? defaultImage : project.image.url }}
+              figma={project.figma}
+              repo={project.repo}
             />
             );
           })}

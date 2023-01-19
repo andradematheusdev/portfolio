@@ -1,13 +1,13 @@
-import SectionTitle from "../components/SectionTitle/SectionTitle";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import ReactTypingEffect from "react-typing-effect";
 import { CaretRight } from "phosphor-react";
 
-export default function AboutMeSection() {
+export const AboutMe = () => {
   return (
     <section id="about" className="about-section">
       <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2">
         <div className="flex flex-1 items-center justify-center mb-8 lg:mb-0 min-w-[80px]">
-          <img src="https://github.com/andradematheusdev.png" className="rounded-lg w-80 h-auto" />
+          <img src="https://github.com/andradematheusdev.png" className="rounded-full w-80 h-auto" />
         </div>
         <div className="flex flex-1 flex-col">
           <SectionTitle title="SOBRE MIM" className="mb-8 text-center md:text-start" />
@@ -29,14 +29,23 @@ export default function AboutMeSection() {
           </div>
           <div className="leading-relaxed space-y-6">
             <p className="text-white text-justify sm:text-start">
-              Tenho 27 anos, sou de Magé - RJ, estudo programação e estou me
+              Tenho 27 anos, sou de Magé - RJ, estudo programação por conta própria e estou me
               graduando em Sistemas para Internet.
             </p>
-            <p className="text-white text-justify sm:text-start">
-              Minha jornada na programação começou em 2013 quando comecei a trabalhar com
-              desenvolvimento php, hoje o foco dos meus estudos é em desenvolvimento front-end com
-              React e TypeScript.
+            <p className="text-justify sm:text-start">
+              Minha jornada na programação começou em 2013 quando comecei a estudar programção web com
+              desenvolvimento em php.
             </p>
+            <p className="text-justify sm:text-start">
+              Em 2015 comecei a trabalhar como Designer Gráfico.
+            </p>
+            <p className="text-justify sm:text-start">
+              Alinhando a experiência de 8 anos como Designer com meus estudos de programação percebi que o front-end
+              era a área certa para mim.
+            </p>
+            <p className="text-justify sm:text-start">
+              Hoje o foco dos meus estudos é em desenvolvimento com React e TypeScript.
+            </p>            
           </div>
         </div>
       </div>

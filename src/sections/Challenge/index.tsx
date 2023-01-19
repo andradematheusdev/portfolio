@@ -1,17 +1,20 @@
 import { gql, useQuery } from "@apollo/client";
 import classNames from "classnames";
 import { CircleNotch } from "phosphor-react";
-import Challenge from "../components/Challenges/Challenge";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
+import Challenge from "../../components/Challenges/Challenge";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 interface Challenges {
   id: string;
   title: string;
   description: string;
   url: string;
+  image: {
+    url: string;
+  }
 }
 
-export default function ChalengeSection() {
+export const Challenges = () => {
   const GET_CHALLENGES_QUERY = gql`
     query ChallengeQuery {
       challenges(first: 4, orderBy: publishedAt_DESC) {
@@ -19,6 +22,9 @@ export default function ChalengeSection() {
         title
         url
         description
+        image {
+          url
+        }
       }
     }
   `;
@@ -37,9 +43,9 @@ export default function ChalengeSection() {
   }
   
   return (
-    <section className="flex flex-col w-full items-center min-h-[400px] px-16 pb-16">
+    <section className="flex flex-col w-full items-center min-h-[400px] px-8 md:px-16 pb-16">
       <SectionTitle title="Desafios Recentes" className="my-8" />
-      <div className={classNames("grid grid-cols-1", {"sm:grid-cols-2 lg:grid-cols-4 gap-16 min-h-[250px]": !loading})}>
+      <div className="grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 items-start grid-flow-col gap-8 min-h-[150px]">
         {loading ? (
             <CircleNotch className="animate-spin" size={32} color="#fff" />
         ) : (
@@ -50,6 +56,7 @@ export default function ChalengeSection() {
                 title={challenge.title}
                 desc={challenge.description}
                 url={challenge.url}
+                image={challenge.image}
               />
             );
           })

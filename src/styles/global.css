@@ -7,12 +7,12 @@ html {
   @apply font-open-sans;
 }
 
-body {
-  @apply bg-zinc-900;
+html, body {
+  @apply text-white bg-zinc-900;
 }
 
 .wellcome-section {
-  @apply flex min-h-screen bg-[url(/images/bg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap;
+  @apply flex min-h-screen items-center justify-center flex-wrap z-10;
 }
 
 .about-section {
@@ -29,10 +29,6 @@ body {
 
 .my-header {
   @apply flex items-center justify-between px-2 md:px-16 fixed top-0 w-full transition-all;
-}
-
-.my-header a {
-  @apply text-white flex flex-1 items-center justify-center px-2 transition-colors;
 }
 
 .header-icon {
@@ -55,6 +51,13 @@ body {
   @apply border-b border-zinc-700;
 }
 
+.challenge{
+  background: linear-gradient(
+    rgba(255,255,255,0.1),
+    rgba(0,0,0,1)
+  );
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -63,4 +66,42 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/* CUSTOM SCROLL BAR*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  @apply bg-neutral-900
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-800;
+}
+
+.background-animate {
+  background-size: 200%;
+  animation: 20s linear infinite alternate;
+  animation-name: BGAnimate;
+}
+
+@keyframes BGAnimate {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }

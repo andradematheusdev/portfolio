@@ -1,8 +1,8 @@
-import ProjectsList from "../components/ProjectsList/ProjectsList";
-import SectionTitle from "../components/SectionTitle/SectionTitle";
-import ViewMore from "../components/ViewMore/ViewMore";
+import ProjectsList from "../../components/ProjectsList/ProjectsList";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import ViewMore from "../../components/ViewMore/ViewMore";
 import { gql, useQuery } from "@apollo/client";
-import { ProjectCardLoading } from "../components/ProjectCard/ProjectCard";
+import { ProjectCardLoading } from "../../components/ProjectCard/ProjectCard";
 import classNames from "classnames";
 
 interface Projects {
@@ -19,7 +19,7 @@ interface Projects {
 }
 
 
-export default function ProjectsSection() {
+export const Projects = () => {
     
   const GET_PROJECTS_QUERY = gql`
   query GetProjects {
@@ -62,11 +62,11 @@ if (!data || !data.projects) {
   return (
     <section id="projects" className="projects-section px-4 lg:px-10">
       <div className="flex w-full items-center px-8 md:px-16">
-        <SectionTitle title="projetos" className={classNames("text-lg my-16 flex-1",{"text-center": data.projects.length < 10})} />
+        <SectionTitle title="projetos de estudo" className={classNames("text-lg my-16 flex-1",{"text-center": data.projects.length < 10})} />
         {
           data.projects.length >= 10 &&
           <div className="flex-1 flex justify-end">
-            <ViewMore url={"#"} className="text-white hover:text-neutral-300 transition-colors" />
+            <ViewMore url={"/projects"} className="text-white hover:text-neutral-300 transition-colors" />
           </div>
         }
       </div>
