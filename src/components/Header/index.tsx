@@ -41,8 +41,8 @@ export const Header = () => {
               Contato
             </a>
         </nav> 
-        <div className="w-64 text-right">
-          {/* <LanguageSelector /> */}
+        <div className="w-64 text-right hidden lg:block">
+          <LanguageSelector />
         </div>
         
         <div className="ml-4 flex lg:hidden">

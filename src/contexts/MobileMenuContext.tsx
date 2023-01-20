@@ -1,17 +1,17 @@
 import { createContext, useState } from "react";
 
-type Props = {
+interface IMeunuContextProps {
   children: React.ReactNode;
 };
 
-export type MenuContextType = {
+type MenuContext = {
   menuState: boolean;
   setMenuState: Function;
 };
 
-export const Context = createContext({} as MenuContextType);
+export const Context = createContext({} as MenuContext);
 
-export default function MenuContext({ children }: Props) {
+export default function MenuContext({ children }: IMeunuContextProps) {
   const [menuState, setMenuState] = useState(false);
   const menuStatePack = { menuState, setMenuState };
 

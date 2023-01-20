@@ -5,7 +5,7 @@ export const Wellcome = () => {
   return (
     <>
     <section id="home" className="wellcome-section">
-      <div className="flex flex-col flex-1 px-6 mt-16 lg:px-20 max-w-[1270px]">
+      <div className="flex flex-col flex-1 px-6 mt-20 lg:px-20 max-w-[1270px] lg:mt-0">
         <div className="flex items-center flex-col mb-8">
           <h2 className="lg:text-3xl block text-center">Olá Mundo, me chamo Matheus Andrade!</h2>
           <h1 className="
