@@ -11,7 +11,7 @@ type Props = {
     noResize?: boolean;
 }
 
-export default function TextArea({children, className, cols = 1, rows, noResize = false, placeHolder, name, id}: Props) {
+export const TextArea = ({children, className, cols = 1, rows, noResize = false, placeHolder, name, id}: Props) => {
   return (
     <textarea
         name={name}

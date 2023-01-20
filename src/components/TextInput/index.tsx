@@ -6,7 +6,7 @@ type Props = {
     id?: string;
 }
 
-export default function TextInput({className, placeHolder, type = "text", name, id}: Props) {
+export const TextInput = ({className, placeHolder, type = "text", name, id}: Props) => {
   return (
     <input
         type={type}
