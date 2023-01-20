@@ -4,7 +4,7 @@ type Props = {
     text?: string;
   };
   
-  export default function SubmitButton({className, children, text}: Props) {
+  export const SubmitButton = ({className, children, text}: Props) => {
     return (
       <button
         className={`flex items-center justify-center text-center px-4 py-2 rounded transition-colors whitespace-nowrap ${className}`}

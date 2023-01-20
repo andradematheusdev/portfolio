@@ -1,6 +1,6 @@
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import ReactTypingEffect from "react-typing-effect";
 import { CaretRight } from "phosphor-react";
+import { SectionTitle } from "../../components";
 
 export const AboutMe = () => {
   return (

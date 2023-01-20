@@ -4,7 +4,7 @@ type Props = {
   level: number;
 };
 
-export default function SkillLevel({ level }: Props) {
+export const SkillLevel = ({ level }: Props) => {
   const rating = [];
   const knowledge = ["INICIANTE", "BÁSICO", "RAZOÁVEL", "BOM", "PROFICIENTE"];
 

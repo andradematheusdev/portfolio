@@ -4,7 +4,7 @@ type Props = {
   tech: string;
 };
 
-export function SkillBlock({ tech }: Props) {
+export const SkillBlock = ({ tech }: Props) => {
   return (
     <div
       className={`flex w-20 h-20 justify-center items-center p-2 cursor-pointer overflow-hidden rounded-xl bg-nav-bg`}
@@ -14,7 +14,7 @@ export function SkillBlock({ tech }: Props) {
   );
 }
 
-export function SkillBlockLoading() {
+export const SkillBlockLoading = () => {
   return (
     <div className="flex w-20 h-20 justify-center items-center p-2 cursor-pointer overflow-hidden rounded-xl bg-nav-bg">
       <CircleNotch size={32} className="animate-spin" color="#fff" />

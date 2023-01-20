@@ -7,7 +7,7 @@ type Props = {
   }
 };
 
-export default function Challenge({ title, url, desc, image }: Props) {
+export const Challenge = ({ title, url, desc, image }: Props) => {
   return (
     <a
       href={url}

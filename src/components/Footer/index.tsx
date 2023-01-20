@@ -1,7 +1,7 @@
 import { Coffee } from "phosphor-react";
 import Logo from "../Logo";
 
-export default function Footer() {
+export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (

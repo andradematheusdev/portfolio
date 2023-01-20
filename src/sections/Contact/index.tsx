@@ -1,7 +1,6 @@
 import TextInput from "../../components/Input/Input";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import SubmitButton from "../../components/SubmitButton/SubmitButton";
 import TextArea from "../../components/TextArea/TextArea";
+import { SectionTitle, SubmitButton } from "../../components";
 
 export const Contact = () => {
   return (

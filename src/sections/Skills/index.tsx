@@ -1,12 +1,12 @@
 import { gql, useQuery } from "@apollo/client";
 import { useState } from "react";
-
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import { SkillBlock, SkillBlockLoading } from "../../components/SkillBlock/SkillBlock";
 import {
   SkillDescription,
   SkillDescriptionLoading,
-} from "../../components/SkillDescription/SkillDescription";
+  SectionTitle,
+  SkillBlock,
+  SkillBlockLoading
+} from "../../components";
 
 interface Skills {
   id: string;

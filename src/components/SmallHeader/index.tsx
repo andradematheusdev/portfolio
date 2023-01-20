@@ -1,7 +1,7 @@
-import { BackButton } from '../BackButton';
+import { BackButton } from '../';
 import Logo from "../Logo";
 
-export default function Header() {
+export const SmallHeader = () => {
   return (
     <>
       <header className={`flex bg-zinc-800 h-10 px-4`}>

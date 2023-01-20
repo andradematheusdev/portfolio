@@ -1,6 +1,5 @@
 import { CircleNotch } from "phosphor-react";
-import { Button } from "../";
-import FigmaLink from "../FigmaLink/FigmaLink";
+import { Button, FigmaLink } from "../";
 
 type Props = {
   name: string;

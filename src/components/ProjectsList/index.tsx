@@ -21,7 +21,7 @@ type Props = {
   data: Projects[];
 }
 
-export default function ProjectsList({data}: Props){
+export const ProjectsList = ({data}: Props) => {
   const [isOverflowing, setIsOverflowing] = useState(false);
   const defaultImage = '/images/skillsbg.jpg';
 

@@ -1,5 +1,5 @@
-import { CaretRight, CircleNotch, Star } from "phosphor-react";
-import SkillLevel from "../SkillLevel/SkillLevel";
+import { CaretRight, CircleNotch } from "phosphor-react";
+import { SkillLevel } from "../";
 
 type Props = {
   title: string;
@@ -7,7 +7,7 @@ type Props = {
   level: number;
 };
 
-export function SkillDescription({ title, desc, level }: Props) {
+export const SkillDescription = ({ title, desc, level }: Props) => {
   if (!desc) {
     return (
       <div className="flex flex-col w-full bg-nav-bg rounded-lg p-8 min-h-[350px]">
@@ -33,7 +33,7 @@ export function SkillDescription({ title, desc, level }: Props) {
   }
 }
 
-export function SkillDescriptionLoading() {
+export const SkillDescriptionLoading = () => {
   return (
     <div className="flex flex-col w-full items-center justify-center bg-nav-bg rounded-lg p-8 min-h-[350px]">
       <CircleNotch size={32} className="animate-spin" color="#fff" />

@@ -17,7 +17,7 @@ type Props = {
   data: Projects[];
 }
 
-export default function ProjectsListFull({data}: Props){ 
+export const ProjectsListFull = ({data}: Props) => { 
   return (
     <div className="grid grid-cols-4 w-full gap-4">
       {data.map((project) => {

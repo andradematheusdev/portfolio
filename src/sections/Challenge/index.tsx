@@ -1,8 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
-import classNames from "classnames";
 import { CircleNotch } from "phosphor-react";
-import Challenge from "../../components/Challenges/Challenge";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import { Challenge, SectionTitle } from "../../components/";
 
 interface Challenges {
   id: string;
