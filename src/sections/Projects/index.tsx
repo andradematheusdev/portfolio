@@ -2,8 +2,8 @@ import ProjectsList from "../../components/ProjectsList/ProjectsList";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import ViewMore from "../../components/ViewMore/ViewMore";
 import { gql, useQuery } from "@apollo/client";
-import { ProjectCardLoading } from "../../components/ProjectCard/ProjectCard";
 import classNames from "classnames";
+import { ProjectCardLoading } from "../../components/";
 
 interface Projects {
   id: string;

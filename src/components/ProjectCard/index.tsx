@@ -1,5 +1,5 @@
 import { CircleNotch } from "phosphor-react";
-import Button from "../Button/Button";
+import { Button } from "../";
 import FigmaLink from "../FigmaLink/FigmaLink";
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
   repo: string;
 };
 
-export function ProjectCardLoading() {
+export const ProjectCardLoading = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[325px] max-w-[325px]">
       <CircleNotch size={32} className="animate-spin" color="#fff" />

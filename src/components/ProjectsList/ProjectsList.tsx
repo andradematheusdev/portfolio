@@ -1,8 +1,8 @@
-import { ProjectCard } from "../ProjectCard/ProjectCard";
 import { ArrowRight } from "../ProjectsNavigation/ArrowRight";
 import { ArrowLeft } from "../ProjectsNavigation/ArrowLeft";
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
+import { ProjectCard } from "../";
 
 type Projects = {
     id: string;
