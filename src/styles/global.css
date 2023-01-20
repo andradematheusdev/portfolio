@@ -20,7 +20,7 @@ html, body {
 }
 
 .skills-section {
-  @apply flex min-h-screen bg-black bg-[url(/images/skillsbg.jpg)] bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center pb-8;
+  @apply flex min-h-screen bg-black bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center pb-8;
 }
 
 .projects-section {

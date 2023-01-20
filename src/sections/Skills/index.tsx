@@ -30,12 +30,6 @@ function SkillsLoading() {
           </div>
           <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 w-full place-items-center place-content-start lg:w-2/5">
             <SkillBlockLoading />
-            <SkillBlockLoading />
-            <SkillBlockLoading />
-            <SkillBlockLoading />
-            <SkillBlockLoading />
-            <SkillBlockLoading />
-            <SkillBlockLoading />
           </div>
         </div>
       </div>
@@ -96,16 +90,14 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none"
+      className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none px-8"
     >
-      <div className="flex flex-1 flex-col items-center px-4 lg:px-10">
-        <SectionTitle title="Conhecimentos" className="my-16 text-xl" />
-        <div className="flex flex-row flex-wrap justify-center lg:justify-between w-full">
-          <div className="w-full sm:px-16 lg:px-0 lg:pr-2 lg:w-2/5 mb-8 lg:mb-0">
-            <SkillDescription title={skillTitle} desc={skillDesc} level={skillLevel} />
-          </div>
-          <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 w-full place-items-center place-content-start lg:w-2/5">
-            {data.skills.map((skill) => {
+      <div className="flex flex-col w-full items-center lg:px-10">
+        <SectionTitle title="Conhecimentos" className="my-16 text-xl" />        
+          <div className="
+            grid grid-cols-1 lg:grid-cols-3 gap-6 w-full place-items-center place-content-start
+          ">
+            {/* {data.skills.map((skill) => {
               return (
                 <button
                   key={skill.id}
@@ -119,9 +111,14 @@ export const Skills = () => {
                   <SkillBlock tech={skill.icon} />
                 </button>
               );
-            })}
+            })} */}
+            <SkillBlock tech={"html"} />
+            <SkillBlock tech={"html"} />
+            <SkillBlock tech={"html"} />
+            <SkillBlock tech={"html"} />
+            <SkillBlock tech={"html"} />
+            <SkillBlock tech={"html"} />
           </div>
-        </div>
       </div>
     </section>
   );

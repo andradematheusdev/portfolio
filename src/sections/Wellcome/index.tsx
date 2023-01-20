@@ -35,9 +35,9 @@ export const Wellcome = () => {
         </div>
       </div>
     </section>
-    <BackgroundElement size={200} color={"#2563eb"} x={45} y={40} />
-    <BackgroundElement size={150} color={"#7e22ce"} x={30} y={50} />
-    <BackgroundElement size={100} color={"#9d174d"} x={40} y={20} opacity={15} />
+    <BackgroundElement size={200} color={"#2563eb"} x={50} y={40} />
+    <BackgroundElement size={150} color={"#7e22ce"} x={25} y={50} />
+    <BackgroundElement size={100} color={"#9d174d"} x={40} y={20} />
     </>
   );
 }
