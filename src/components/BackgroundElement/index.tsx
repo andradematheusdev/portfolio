@@ -15,6 +15,6 @@ export const BackgroundElement = ({size, color, x, y, opacity = 20}: IBackground
         blur-3xl absolute rounded-full z-0 antialiased
       `}
       style={{backgroundColor: color, top: `${y}%`, left: `${x}%`, padding: size, opacity: `${opacity}%`}}
-    >a</div>
+    />
   )
 }
