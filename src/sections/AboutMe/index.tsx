@@ -12,7 +12,7 @@ export const AboutMe = () => {
         <div className="flex flex-1 flex-col">
           <SectionTitle title="SOBRE MIM" className="mb-8 text-center md:text-start" />
           <h1 className="text-white font-bold text-4xl text-center md:text-start mb-16 md:mb-0">
-            OLÁ, EU SOU O MATHEUS!
+            OLÁ, EU SOU O <span className="text-violet-500">MATHEUS</span>!
           </h1>
           <div className="flex flex-wrap items-center text-white font-light text-lg mb-8 h-[50px] lg:h-auto">
             <span className="flex flex-nowrap flex-row items-center w-full justify-center md:justify-start text-center md:text-start">
