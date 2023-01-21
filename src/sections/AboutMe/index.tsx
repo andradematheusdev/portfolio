@@ -5,10 +5,8 @@ import { SectionTitle } from "../../components";
 export const AboutMe = () => {
   return (
     <section id="about" className="about-section">
-      <div className="grid grid-rows-2 md:grid-rows-1 grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-1 items-center justify-center mb-8 lg:mb-0 min-w-[90px]">
-          <img src="https://github.com/andradematheusdev.png" className="rounded-full w-90 h-auto" />
-        </div>
+      <div className="grid md:grid-rows-1 md:grid-cols-2 max-w-[1270px]">
+        <img src="https://github.com/andradematheusdev.png" className="rounded-full w-[400px] h-auto mb-8 md:mb-0 self-center" />
         <div className="flex flex-1 flex-col">
           <SectionTitle title="SOBRE MIM" className="mb-8 text-center md:text-start" />
           <h1 className="text-white font-bold text-4xl text-center md:text-start mb-16 md:mb-0">
@@ -27,26 +25,20 @@ export const AboutMe = () => {
               />
             </span>
           </div>
-          <div className="leading-relaxed space-y-6">
-            <p className="text-white text-justify sm:text-start">
+          <p className="leading-relaxed space-y-6 text-justify">
               Tenho 27 anos, sou de Magé - RJ, estudo programação por conta própria e estou me
               graduando em Sistemas para Internet.
-            </p>
-            <p className="text-justify sm:text-start">
+              <br/><br/>
               Minha jornada na programação começou em 2013 quando comecei a estudar programção web com
               desenvolvimento em php.
-            </p>
-            <p className="text-justify sm:text-start">
+              <br/><br/>
               Em 2015 comecei a trabalhar como Designer Gráfico.
-            </p>
-            <p className="text-justify sm:text-start">
+              <br/><br/>
               Alinhando a experiência de 8 anos como Designer com meus estudos de programação percebi que o front-end
               era a área certa para mim.
-            </p>
-            <p className="text-justify sm:text-start">
+              <br/><br/>
               Hoje o foco dos meus estudos é em desenvolvimento com React e TypeScript.
-            </p>            
-          </div>
+          </p>
         </div>
       </div>
     </section>

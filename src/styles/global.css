@@ -16,7 +16,7 @@ html, body {
 }
 
 .about-section {
-  @apply flex flex-col w-full pb-28 justify-center px-8 lg:px-14;
+  @apply flex flex-col w-full pb-28 justify-center items-center px-8 lg:px-14;
 }
 
 .skills-section {
