@@ -11,6 +11,10 @@ html, body {
   @apply text-white bg-zinc-900;
 }
 
+body{
+  @apply overflow-x-hidden;
+}
+
 .wellcome-section {
   @apply flex min-h-screen items-center justify-center flex-wrap z-10;
 }
