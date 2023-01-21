@@ -42,7 +42,7 @@ export const Challenges = () => {
   
   return (
     <section className="flex flex-col w-full items-center min-h-[400px] px-8 md:px-16 pb-16">
-      <SectionTitle title="Desafios Recentes" className="my-8" />
+      <SectionTitle title="Desafios das Comunidades" className="my-8" />
       <div className="grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 items-start grid-flow-col gap-8 min-h-[150px]">
         {loading ? (
             <CircleNotch className="animate-spin" size={32} color="#fff" />

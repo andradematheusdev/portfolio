@@ -1,7 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 import { useState } from "react";
 import {
-  SkillDescription,
   SkillDescriptionLoading,
   SectionTitle,
   SkillBlock,
@@ -67,10 +66,6 @@ export const Skills = () => {
     }
   `;
 
-  const [skillTitle, setSkillTitle] = useState("");
-  const [skillDesc, setSkillDesc] = useState("");
-  const [skillLevel, setSkillLevel] = useState(0);
-
   const { loading, data } = useQuery<{ skills: Skills[] }>(GET_SKILLS_QUERY);
 
   if (loading) {
@@ -81,43 +76,12 @@ export const Skills = () => {
     return <SkillsFailOrEmpty />;
   }
 
-  function handleSkillClick(skill: Skills) {
-    setSkillTitle(skill.name);
-    setSkillDesc(skill.description);
-    setSkillLevel(skill.skillLevel);
-  }
-
   return (
-    <section
-      id="skills"
-      className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none px-8"
-    >
-      <div className="flex flex-col w-full items-center lg:px-10">
+    <section id="skills" className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none px-8">
+      <div className="flex flex-col w-full items-center lg:px-10 max-w-[1270px]">
         <SectionTitle title="Conhecimentos" className="my-16 text-xl" />        
-          <div className="
-            grid grid-cols-1 lg:grid-cols-3 gap-6 w-full place-items-center place-content-start
-          ">
-            {/* {data.skills.map((skill) => {
-              return (
-                <button
-                  key={skill.id}
-                  onMouseEnter={() => {
-                    handleSkillClick(skill);
-                  }}
-                  onClick={() => {
-                    handleSkillClick(skill);
-                  }}
-                >
-                  <SkillBlock tech={skill.icon} />
-                </button>
-              );
-            })} */}
-            <SkillBlock tech={"html"} />
-            <SkillBlock tech={"html"} />
-            <SkillBlock tech={"html"} />
-            <SkillBlock tech={"html"} />
-            <SkillBlock tech={"html"} />
-            <SkillBlock tech={"html"} />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full place-items-center place-content-start">
+            {data.skills.map((skill) => <SkillBlock tech={{name: skill.name, level: skill.skillLevel}} />)}
           </div>
       </div>
     </section>

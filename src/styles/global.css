@@ -8,7 +8,7 @@ html {
 }
 
 html, body {
-  @apply text-white bg-zinc-900 overflow-x-hidden;
+  @apply text-white bg-neutral-900 overflow-x-hidden;
 }
 
 .wellcome-section {
@@ -16,15 +16,15 @@ html, body {
 }
 
 .about-section {
-  @apply flex flex-col w-full bg-zinc-900 pb-28 min-h-screen justify-center px-8 lg:px-14;
+  @apply flex flex-col w-full pb-28 justify-center px-8 lg:px-14;
 }
 
 .skills-section {
-  @apply flex min-h-screen bg-black bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center pb-8;
+  @apply flex items-start justify-center pb-8 min-h-screen;
 }
 
 .projects-section {
-  @apply flex flex-col min-h-screen bg-zinc-900 bg-no-repeat bg-center bg-cover bg-fixed items-center justify-center flex-wrap pb-8;
+  @apply flex flex-col min-h-screen items-center justify-center flex-wrap pb-8;
 }
 
 .my-header {

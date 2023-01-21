@@ -1,18 +1,21 @@
 import { CircleNotch } from "phosphor-react";
 
 type Props = {
-  tech: string;
+  tech: {
+    name: string;
+    level: number;
+  };
 };
 
 export const SkillBlock = ({ tech }: Props) => {
+  const knowledge = ["Iniciante", "Básico", "Razoável", "Bom", "Proficiente"];
+
   return (
-    <div className="
-      flex w-full items-center p-4 cursor-pointer overflow-hidden rounded-xl border border-neutral-700
-    ">
-      <img src={`/svgs/${tech}logo.svg`} className="w-16 mr-2" />
-      <p className="flex flex-col">
-        <span className="font-bold">HTML</span>
-        <span className="text-violet-400">Marcação de Hypertexto</span>
+    <div className="flex w-full items-center p-4 cursor-pointer overflow-hidden rounded-xl border border-neutral-800">
+      <img src={`/svgs/${tech.name}.svg`} className="w-16 mr-4" />
+      <p className="flex flex-col text-left">
+        <span className="font-bold uppercase">{tech.name}</span>
+        <span className="text-neutral-400">{knowledge[tech.level - 1]}</span>
       </p>
     </div>
   );
