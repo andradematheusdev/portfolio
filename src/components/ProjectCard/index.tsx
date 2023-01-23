@@ -23,7 +23,7 @@ export const ProjectCardLoading = () => {
 
 export function ProjectCard({ demo, description, name, stack, image, figma, repo }: Props) {
   return (
-    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[325px] max-w-[325px]">
+    <div className="flex flex-col w-full bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[325px] max-w-[325px] snap-center">
       <div className="flex w-full h-48 overflow-hidden relative">
         <img src={image.url} className="w-full object-cover object-center" />
         {figma && <FigmaLink url={figma} />}

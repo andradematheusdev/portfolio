@@ -34,7 +34,7 @@ export const ProjectsList = ({data}: Props) => {
   return (
     <div className="flex w-full relative items-center">
     {isOverflowing && <ArrowLeft listRef={listRef} />}
-    <div className={classNames(`flex w-full gap-x-4 overflow-x-auto pb-8 scroll-smooth`, {"justify-center": !isOverflowing})} id="plContainer" ref={listRef} >
+    <div className={classNames(`flex w-full gap-x-4 overflow-x-auto pb-8 scroll-smooth snap-x snap-mandatory`, {"justify-center": !isOverflowing})} id="plContainer" ref={listRef} >
         {data.map((project) => {
           return (
             <ProjectCard
