@@ -2,7 +2,7 @@ import { ApolloProvider } from '@apollo/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import MenuContext from './contexts/MobileMenuContext';
 import { client } from './libs/apollo';
-import { Home, Projects } from './pages/';
+import { Challenges, Home, Projects } from './pages/';
 
 
 function App() {
@@ -14,6 +14,10 @@ function App() {
     {
       path: '/projects',
       element: <Projects />
+    },
+    {
+      path: '/challenges',
+      element: <Challenges />
     },
   ]);
 

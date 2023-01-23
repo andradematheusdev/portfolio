@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
+import classNames from "classnames";
 import { CircleNotch } from "phosphor-react";
-import { Challenge, SectionTitle } from "../../components/";
+import { Challenge, SectionTitle, ViewMore } from "../../components/";
 
 interface Challenges {
   id: string;
@@ -42,8 +43,14 @@ export const Challenges = () => {
   
   return (
     <section className="flex flex-col w-full items-center min-h-[400px] px-8 md:px-16 pb-16">
-      <div className="w-full text-center my-8">
+      <div className={"flex justify-center w-full my-8"}>
         <SectionTitle title="Desafios das Comunidades" />
+        {
+          data.challenges.length >= 4 &&
+          <div className="flex-1 flex justify-end">
+            <ViewMore url={"/challenges"} className="text-white hover:text-neutral-300 transition-colors" />
+          </div>
+        }
       </div>
       <div className="grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 items-start grid-flow-col gap-8 min-h-[150px]">
         {loading ? (
