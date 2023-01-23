@@ -42,7 +42,7 @@ export const Header = () => {
             </a>
         </nav> 
         <div className="w-64 text-right hidden lg:block">
-          <LanguageSelector />
+          {/* <LanguageSelector /> */}
         </div>
         
         <div className="ml-4 flex lg:hidden">

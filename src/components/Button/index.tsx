@@ -13,7 +13,7 @@ export const Button = ({ url = "", className, children, text, blank, iconLeft, i
     <a
       href={url}
       className={`
-        flex items-center justify-center text-center px-4 py-2 rounded-lg transition-colors whitespace-nowrap
+        flex items-center justify-center text-center px-4 py-2 rounded-md transition-colors whitespace-nowrap
         ${className}
       `}
       target={blank ? "_blank" : "_self"}

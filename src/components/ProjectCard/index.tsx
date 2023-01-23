@@ -46,7 +46,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
           <div className="flex-1 mb-4">
               <Button
                 text="REPO"
-                className="bg-transparent border border-violet-500 text-white rounded px-8 hover:bg-violet-600 hover:border-violet-600 transition-colors"
+                className="border-2 border-violet-500 bg-violet-500 hover:bg-violet-600 hover:border-violet-600"
                 url={repo}
                 blank
               />
@@ -56,7 +56,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
               <div className="flex-1 mb-4">
               <Button
                 text="DEMO"
-                className="bg-violet-500 border border-violet-500 text-white rounded px-8 hover:bg-violet-600 hover:border-violet-600 transition-colors"
+                className="bg-none border-2 border-violet-500 hover:bg-violet-600 hover:border-violet-600 hover:text-white"
                 url={demo}
                 blank
               />
