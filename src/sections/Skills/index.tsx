@@ -80,7 +80,7 @@ export const Skills = () => {
     <section id="skills" className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none px-8">
       <div className="flex flex-col w-full items-center lg:px-10 max-w-[1270px]">
         <SectionTitle title="Conhecimentos" className="my-16 text-xl" />        
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full place-items-center place-content-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full place-items-center place-content-start">
             {data.skills.map((skill) => <SkillBlock tech={{name: skill.name, level: skill.skillLevel}} />)}
           </div>
       </div>
