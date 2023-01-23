@@ -5,9 +5,11 @@ import { SectionTitle } from "../../components";
 export const AboutMe = () => {
   return (
     <section id="about" className="about-section">
-      <div className="grid md:grid-rows-1 md:grid-cols-2 max-w-[1270px]">
-        <img src="https://github.com/andradematheusdev.png" className="rounded-full w-[400px] h-auto mb-8 md:mb-0 self-center" />
-        <div className="flex flex-1 flex-col">
+      <div className="grid lg:grid-rows-1 lg:grid-cols-2 max-w-[1270px] items-center">
+        <div className="flex w-full justify-center md:min-w-[520px]">
+          <img src="https://github.com/andradematheusdev.png" className="rounded-full w-[400px] h-auto my-8 md:my-0 self-center" />
+        </div>
+        <div className="flex flex-1 flex-col md:min-w-[520px]">
           <SectionTitle title="SOBRE MIM" className="mb-8 text-center md:text-start" />
           <h1 className="text-white font-bold text-4xl text-center md:text-start mb-16 md:mb-0">
             OLÁ, EU SOU O <span className="text-violet-500">MATHEUS</span>!
