@@ -1,39 +1,33 @@
 import { gql, useQuery } from "@apollo/client";
-import { ProjectCardLoading, Footer, ProjectsListFull, SmallHeader } from "../../components/";
+import { ProjectCardLoading, Footer, SmallHeader, ChallengesListFull  } from "../../components/";
 
-interface Projects {
+interface Challenge {
   id: string;
-  name: string;
+  title: string;
   description: string;
-  stack: string[];
-  demo: string;
+  url: string;
   image: {
     url: string;
-  };
-  figma: string;
-  repo: string;
+  }
 }
 
 export const Challenges = () => {
 
-  const GET_PROJECTS_QUERY = gql`
-  query GetProjects {
-    projects(orderBy: order_DESC) {
-      demo
-      description
-      id
-      name
-      stack
-      image {
+  const GET_CHALLENGES_QUERY = gql`
+    query ChallengeQuery {
+      challenges(orderBy: publishedAt_DESC) {
+        id
+        title
         url
+        description
+        image {
+          url
+        }
       }
-      figma
-      repo
     }
-  }
-`;
+  `;
 
-const { data, loading } = useQuery<{ projects: Projects[] }>(GET_PROJECTS_QUERY);
+const { data, loading } = useQuery<{ challenges: Challenge[] }>(GET_CHALLENGES_QUERY);
 
 if (loading) {
   return (
@@ -45,7 +39,7 @@ if (loading) {
   );
 }
 
-if (!data || !data.projects) {
+if (!data || !data.challenges) {
   return (
     <div className="flex w-full min-h-screen">
       <span>Ops... Não foi possivel carregar o conteúdo 😞</span>
@@ -56,8 +50,8 @@ if (!data || !data.projects) {
   return (
     <>
       <SmallHeader />
-      <main className="flex flex-col w-full items-center justify-center p-8">
-        <ProjectsListFull data={data.projects} />
+      <main className="flex flex-col w-full items-center justify-start p-8 min-h-screen">
+        <ChallengesListFull data={data.challenges} />
       </main>
       <Footer />
     </>

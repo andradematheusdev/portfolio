@@ -2,6 +2,7 @@ export * from './BackButton';
 export * from './BackgroundElement';
 export * from './Button';
 export * from './Challenges';
+export * from './ChallengesListFull';
 export * from './FigmaLink';
 export * from './Footer';
 export * from './Header';
