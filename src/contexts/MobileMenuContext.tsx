@@ -11,7 +11,7 @@ export type MenuContextType = {
 
 export const Context = createContext({} as MenuContextType);
 
-export const MenuContext = ({ children }: IMeunuContextProps) => {
+export const MenuContextProvider = ({ children }: IMeunuContextProps) => {
   const [menuState, setMenuState] = useState(false);
 
   return <Context.Provider value={{menuState, setMenuState}}>{children}</Context.Provider>;

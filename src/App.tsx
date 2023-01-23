@@ -1,6 +1,6 @@
 import { ApolloProvider } from '@apollo/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import MenuContext from './contexts/MobileMenuContext';
+import { MenuContextProvider }  from './contexts/MobileMenuContext';
 import { client } from './libs/apollo';
 import { Challenges, Home, Projects } from './pages/';
 
@@ -24,9 +24,9 @@ function App() {
   return (
     <>
       <ApolloProvider client={client}>
-        <MenuContext>
+        <MenuContextProvider>
           <RouterProvider router={router} />
-        </MenuContext>
+        </MenuContextProvider>
       </ApolloProvider>      
     </>
   );
