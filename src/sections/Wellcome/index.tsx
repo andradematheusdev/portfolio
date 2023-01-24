@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { BackgroundElement } from "../../components";
 import { Button } from "../../components/";
 import { Context, LangContextType } from "../../contexts/LanguageContext";
-import translation from '../../lang/language.json';
+import { translation } from '../../lang/language';
 
 export const Wellcome = () => {
   const context = useContext<LangContextType>(Context);
@@ -17,7 +17,7 @@ export const Wellcome = () => {
             text-4xl lg:text-6xl font-bold block text-center
             bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent background-animate
           ">
-            Desenvolvedor Front-End focado em JavaScript
+            {translation[context.lang].frontEnd}
           </h1>
           <p className="max-w-[720px] text-center my-16">
             Tenho 27 anos, sou apaixonado por tecnologia, estudo programação por conta própria a mais de 1 ano e tenho muita facilidade para aprender coisas novas!          
