@@ -1,13 +1,18 @@
+import { useContext } from "react";
 import { BackgroundElement } from "../../components";
 import { Button } from "../../components/";
+import { Context, LangContextType } from "../../contexts/LanguageContext";
+import translation from '../../lang/language.json';
 
 export const Wellcome = () => {
+  const context = useContext<LangContextType>(Context);
+
   return (
     <>
     <section id="home" className="wellcome-section">
       <div className="flex flex-col flex-1 px-6 mt-20 lg:px-20 max-w-[1270px] lg:mt-0">
         <div className="flex items-center flex-col mb-8">
-          <h2 className="lg:text-3xl block text-center">Olá Mundo, me chamo Matheus Andrade!</h2>
+          <h2 className="lg:text-3xl block text-center">{ translation[context.lang].helloWorld }</h2>
           <h1 className="
             text-4xl lg:text-6xl font-bold block text-center
             bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent background-animate
