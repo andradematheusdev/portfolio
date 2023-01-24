@@ -15,7 +15,7 @@ export const Challenges = () => {
 
   const GET_CHALLENGES_QUERY = gql`
     query ChallengeQuery {
-      challenges(orderBy: publishedAt_DESC) {
+      challenges(orderBy: createdAt_DESC) {
         id
         title
         url
