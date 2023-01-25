@@ -1,5 +1,5 @@
 import { Header, Footer } from '../../components';
-import { Wellcome, Challenges, Contact, Projects, AboutMe, Skills } from '/sections/';
+import { Wellcome, Challenges, Contact, Projects, AboutMe, Skills } from './sections';
 
 export const Home = () => {
   return (
