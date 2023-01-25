@@ -62,7 +62,7 @@ export const translation: ITranslation = {
       about: "About",
       knowledge: "Knowledge",
       projects: "Projects",
-      contact: "Contacts"
+      contact: "Contact"
     }
   },
 };
