@@ -12,15 +12,15 @@ export const Wellcome = () => {
     <section id="home" className="wellcome-section">
       <div className="flex flex-col flex-1 px-6 mt-20 lg:px-20 max-w-[1270px] lg:mt-0">
         <div className="flex items-center flex-col mb-8">
-          <h2 className="lg:text-3xl block text-center">{ translation[context.lang].helloWorld }</h2>
+          <h2 className="lg:text-3xl block text-center">{ translation[context.lang].wellcomeSection.helloWorld }</h2>
           <h1 className="
             text-4xl lg:text-6xl font-bold block text-center
             bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent background-animate
           ">
-            {translation[context.lang].frontEnd}
+            {translation[context.lang].wellcomeSection.frontEnd}
           </h1>
           <p className="max-w-[720px] text-center my-16">
-            Tenho 27 anos, sou apaixonado por tecnologia, estudo programação por conta própria a mais de 1 ano e tenho muita facilidade para aprender coisas novas!          
+            {translation[context.lang].wellcomeSection.about}          
           </p>
         </div>
         <div className="flex flex-row w-full space-x-2 justify-center">

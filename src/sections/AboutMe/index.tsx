@@ -1,8 +1,13 @@
 import ReactTypingEffect from "react-typing-effect";
 import { CaretRight } from "phosphor-react";
 import { SectionTitle } from "../../components";
+import { translation } from '../../lang/language';
+import { useContext } from "react";
+import { Context } from "../../contexts/LanguageContext";
 
 export const AboutMe = () => {
+  const context = useContext(Context);
+
   return (
     <section id="about" className="about-section">
       <div className="grid lg:grid-rows-1 lg:grid-cols-2 max-w-[1270px] items-center">
@@ -10,7 +15,7 @@ export const AboutMe = () => {
           <img src="https://github.com/andradematheusdev.png" className="rounded-full w-[400px] h-auto my-8 md:my-0 self-center" />
         </div>
         <div className="flex flex-1 flex-col md:min-w-[520px]">
-          <SectionTitle title="SOBRE MIM" className="mb-8 text-center md:text-start" />
+          <SectionTitle title={translation[context.lang].sectionsTitle.aboutMe} className="mb-8 text-center md:text-start" />
           <h1 className="text-white font-bold text-4xl text-center md:text-start mb-16 md:mb-0">
             OLÁ, EU SOU O <span className="text-violet-500">MATHEUS</span>!
           </h1>
