@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
 import {
   SectionTitle,
   SkillBlock,
   SkillBlockLoading
 } from "@/components";
+import { Context } from "@/contexts/LanguageContext";
+import { translation } from '@/lang/language';
 
 interface Skills {
   id: string;
@@ -51,6 +54,8 @@ function SkillsFailOrEmpty() {
 }
 
 export const Skills = () => {
+  const context = useContext(Context);
+
   const GET_SKILLS_QUERY = gql`
     query GetSkills {
       skills(orderBy: order_ASC, first: 30) {
@@ -77,7 +82,7 @@ export const Skills = () => {
   return (
     <section id="skills" className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none px-8">
       <div className="flex flex-col w-full items-center lg:px-10 max-w-[1270px]">
-        <SectionTitle title="Conhecimentos" className="my-16 text-xl" />        
+        <SectionTitle title={translation[context.lang].sectionsTitle.skills} className="my-16 text-xl" />        
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full place-items-center place-content-start">
             {data.skills.map((skill) => <SkillBlock tech={{name: skill.name, level: skill.skillLevel}} />)}
           </div>

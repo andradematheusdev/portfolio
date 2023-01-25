@@ -37,7 +37,7 @@ export const Header = () => {
               {translation[context.lang].navigation.about}
             </a>
             <a href="#skills" className="hover:text-violet-700 transition-colors">
-              {translation[context.lang].navigation.knowledge}
+              {translation[context.lang].navigation.skills}
             </a>
             <a href="#projects" className="hover:text-violet-700 transition-colors">
               {translation[context.lang].navigation.projects}

@@ -19,7 +19,7 @@ interface ITranslation {
     };
     sectionsTitle: {
       aboutMe: string;
-      knowledge: string;
+      skills: string;
       projects: string;
       challenges: string;
       contact: string;
@@ -27,7 +27,7 @@ interface ITranslation {
     navigation: {
       home: string;
       about: string;
-      knowledge: string;
+      skills: string;
       projects: string;
       contact: string;
     };
@@ -54,7 +54,7 @@ export const translation: ITranslation = {
     },
     sectionsTitle: {
       aboutMe: "SOBRE MIM",
-      knowledge: "CONHECIMENTOS",
+      skills: "CONHECIMENTOS",
       projects: "PROJETOS DE ESTUDO",
       challenges: "DESAFIOS DAS COMUNIDADES",
       contact: "CONTATO"
@@ -62,7 +62,7 @@ export const translation: ITranslation = {
     navigation: {
       home: "Início",
       about: "Sobre",
-      knowledge: "Conhecimentos",
+      skills: "Conhecimentos",
       projects: "Projetos",
       contact: "Contato"
     }
@@ -86,7 +86,7 @@ export const translation: ITranslation = {
     },
     sectionsTitle: {
       aboutMe: "ABOUT ME",
-      knowledge: "MY SKILLS",
+      skills: "MY SKILLS",
       projects: "STUDY PROJECTS",
       challenges: "COMMUNITIES CHALLENGES",
       contact: "CONTACT"
@@ -94,7 +94,7 @@ export const translation: ITranslation = {
     navigation: {
       home: "Home",
       about: "About",
-      knowledge: "Skills",
+      skills: "Skills",
       projects: "Projects",
       contact: "Contact"
     }
