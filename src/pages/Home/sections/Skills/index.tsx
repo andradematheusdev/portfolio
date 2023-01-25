@@ -1,6 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
 import {
-  SkillDescriptionLoading,
   SectionTitle,
   SkillBlock,
   SkillBlockLoading
@@ -24,7 +23,7 @@ function SkillsLoading() {
         <SectionTitle title="Conhecimentos" className="my-16 text-xl" />
         <div className="flex flex-row flex-wrap justify-center lg:justify-between w-full">
           <div className="w-full lg:pr-2 lg:w-2/5 mb-8 lg:mb-0">
-            <SkillDescriptionLoading />
+           
           </div>
           <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 w-full place-items-center place-content-start lg:w-2/5">
             <SkillBlockLoading />
