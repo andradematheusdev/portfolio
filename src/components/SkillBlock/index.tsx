@@ -1,4 +1,7 @@
+import { useContext } from "react";
 import { CircleNotch } from "phosphor-react";
+import { Context } from "@/contexts/LanguageContext";
+import { translation } from '@/lang/language';
 
 type Props = {
   tech: {
@@ -8,7 +11,14 @@ type Props = {
 };
 
 export const SkillBlock = ({ tech }: Props) => {
-  const knowledge = ["Iniciante", "Básico", "Razoável", "Bom", "Proficiente"];
+  const context = useContext(Context);
+  const knowledge = [
+    translation[context.lang].skillsSection.one,
+    translation[context.lang].skillsSection.two,
+    translation[context.lang].skillsSection.three,
+    translation[context.lang].skillsSection.four,
+    translation[context.lang].skillsSection.five
+  ];
   return (
     <div className="flex w-full items-center p-4 overflow-hidden rounded-xl border border-neutral-800">
       <img src={`/svgs/${tech.name.toLocaleLowerCase()}.svg`} className="w-16 mr-4" />

@@ -16,14 +16,14 @@ export const AboutMe = () => {
         </div>
         <div className="flex flex-1 flex-col md:min-w-[520px]">
           <SectionTitle title={translation[context.lang].sectionsTitle.aboutMe} className="mb-8 text-center md:text-start" />
-          <h1 className="text-white font-bold text-4xl text-center md:text-start mb-16 md:mb-0">
-            OLÁ, EU SOU O <span className="text-violet-500">MATHEUS</span>!
+          <h1 className="text-white font-bold text-4xl text-center md:text-start mb-16 md:mb-0 uppercase">
+            {translation[context.lang].aboutMeSection.hello} <span className="text-violet-500">MATHEUS</span>!
           </h1>
           <div className="flex flex-wrap items-center text-white font-light text-lg mb-8 h-[50px] lg:h-auto">
-            <span className="flex flex-nowrap flex-row items-center w-full justify-center md:justify-start text-center md:text-start">
+            <span className="flex flex-nowrap flex-row items-center w-full justify-center md:justify-start text-center md:text-start uppercase">
               <CaretRight size={18} className="mr-2 hidden lg:inline" />
               <ReactTypingEffect
-                staticText="DESENVOLVEDOR FRONT-END COM"
+                staticText={translation[context.lang].aboutMeSection.developerWith}
                 text={["REACT", "TYPESCRIPT", "TAILWIND", "SASS", "BOOTSTRAP"]}
                 speed={50}
                 typingDelay={10}

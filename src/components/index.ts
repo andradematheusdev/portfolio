@@ -15,8 +15,6 @@ export * from './ProjectsList';
 export * from './ProjectsNavigation';
 export * from './SectionTitle';
 export * from './SkillBlock';
-export * from './SkillDescription';
-export * from './SkillLevel';
 export * from './SmallHeader';
 export * from './SubmitButton';
 export * from './TextArea';
