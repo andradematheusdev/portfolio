@@ -11,7 +11,14 @@ interface ITranslation {
       projects: string;
       challenges: string;
       contact: string;
-    }
+    };
+    navigation: {
+      home: string;
+      about: string;
+      knowledge: string;
+      projects: string;
+      contact: string;
+    };
   }
 }
 
@@ -28,6 +35,13 @@ export const translation: ITranslation = {
       projects: "PROJETOS DE ESTUDO",
       challenges: "DESAFIOS DAS COMUNIDADES",
       contact: "CONTATO"
+    },
+    navigation: {
+      home: "Início",
+      about: "Sobre",
+      knowledge: "Conhecimentos",
+      projects: "Projetos",
+      contact: "Contato"
     }
   },
   "en": {
@@ -42,6 +56,13 @@ export const translation: ITranslation = {
       projects: "STUDY PROJECTS",
       challenges: "COMMUNITIES CHALLENGES",
       contact: "CONTACT"
+    },
+    navigation: {
+      home: "Home",
+      about: "About",
+      knowledge: "Knowledge",
+      projects: "Projects",
+      contact: "Contacts"
     }
   },
 };
