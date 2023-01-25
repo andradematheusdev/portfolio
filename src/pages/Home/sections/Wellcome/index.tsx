@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { BackgroundElement } from "../../components";
-import { Button } from "../../components/";
-import { Context, LangContextType } from "../../contexts/LanguageContext";
-import { translation } from '../../lang/language';
+import { BackgroundElement } from "../../../../components";
+import { Button } from "../../../../components/";
+import { Context, LangContextType } from "../../../../contexts/LanguageContext";
+import { translation } from '../../../../lang/language';
 
 export const Wellcome = () => {
   const context = useContext<LangContextType>(Context);

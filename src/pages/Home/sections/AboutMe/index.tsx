@@ -1,9 +1,9 @@
 import ReactTypingEffect from "react-typing-effect";
 import { CaretRight } from "phosphor-react";
-import { SectionTitle } from "../../components";
-import { translation } from '../../lang/language';
+import { SectionTitle } from "../../../../components";
+import { translation } from '../../../../lang/language';
 import { useContext } from "react";
-import { Context } from "../../contexts/LanguageContext";
+import { Context } from "../../../../contexts/LanguageContext";
 
 export const AboutMe = () => {
   const context = useContext(Context);
