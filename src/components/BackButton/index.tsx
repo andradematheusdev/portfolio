@@ -5,7 +5,7 @@ export const BackButton = () => {
   const navigate = useNavigate();
 
   return (
-    <a role={"button"} onClick={() => navigate(-1)}>
+    <a role={"button"} onClick={() => navigate("/")}>
       <CaretLeft size={24} color={"#fff"} weight={"bold"} />
     </a>
   )

@@ -1,7 +1,11 @@
-import { Coffee } from "phosphor-react";
+import { useContext } from "react";
+import { Context } from "@/contexts/LanguageContext";
+import { translation } from "@/lang/language";
 import Logo from "../Logo";
+import { Coffee } from "phosphor-react";
 
 export const Footer = () => {
+  const { lang } = useContext(Context);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -11,7 +15,7 @@ export const Footer = () => {
           <Logo className={"fill-violet-500"} url="#" />
         </span>
         <span className="flex flex-1 justify-center md:justify-end text-white">
-          {currentYear} - Feito com <Coffee className="mx-2" size={24} /> por mim.
+          {currentYear} - {translation[lang].footer.madeWith} <Coffee className="mx-2" size={24} /> {translation[lang].footer.byMe}
         </span>
       </div>
     </footer>

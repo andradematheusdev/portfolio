@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
 import { CircleNotch } from "phosphor-react";
 import { Challenge, SectionTitle, ViewMore } from "@/components/";
+import { Context } from "@/contexts/LanguageContext";
+import { translation } from "@/lang/language";
 
 interface Challenges {
   id: string;
@@ -13,6 +16,8 @@ interface Challenges {
 }
 
 export const Challenges = () => {
+  const context = useContext(Context);
+
   const GET_CHALLENGES_QUERY = gql`
     query ChallengeQuery {
       challenges(first: 4, orderBy: createdAt_DESC) {
@@ -43,7 +48,7 @@ export const Challenges = () => {
   return (
     <section className="flex flex-col w-full items-center min-h-[400px] px-8 md:px-16 pb-16">
       <div className={"flex justify-center w-full my-8"}>
-        <SectionTitle title="Desafios das Comunidades" />
+        <SectionTitle title={translation[context.lang].sectionsTitle.challenges} />
         {
           data.challenges.length >= 4 &&
           <div className="flex-1 flex justify-end">

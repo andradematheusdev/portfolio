@@ -1,39 +1,3 @@
-import { AboutMe } from './../pages/Home/sections/AboutMe/index';
-interface ITranslation {
-  [key: string]: {
-    wellcomeSection: {
-      helloWorld: string;
-      frontEnd: string;
-      about: string;
-    };
-    aboutMeSection: {
-      hello: string;
-      developerWith: string;
-    };
-    skillsSection: {
-      one: string;
-      two: string;
-      three: string;
-      four: string;
-      five: string;
-    };
-    sectionsTitle: {
-      aboutMe: string;
-      skills: string;
-      projects: string;
-      challenges: string;
-      contact: string;
-    };
-    navigation: {
-      home: string;
-      about: string;
-      skills: string;
-      projects: string;
-      contact: string;
-    };
-  }
-}
-
 export const translation: ITranslation = {
   "pt_br": {
     wellcomeSection: {
@@ -52,6 +16,12 @@ export const translation: ITranslation = {
       four: "Bom",
       five: "Proficiente"
     },
+    contactSection: {
+      name: "Nome",
+      phone: "Telefone",
+      mail: "E-mail",
+      msg: "Mensagem"
+    },
     sectionsTitle: {
       aboutMe: "SOBRE MIM",
       skills: "CONHECIMENTOS",
@@ -65,6 +35,14 @@ export const translation: ITranslation = {
       skills: "Conhecimentos",
       projects: "Projetos",
       contact: "Contato"
+    },
+    components: {
+      viewMore: "Ver Mais",
+      submitButton: "Enviar"
+    },
+    footer: {
+      madeWith: "Feito com",
+      byMe: "por mim."
     }
   },
   "en": {
@@ -84,6 +62,12 @@ export const translation: ITranslation = {
       four: "Good",
       five: "Proficient"
     },
+    contactSection: {
+      name: "Name",
+      phone: "Phone",
+      mail: "E-mail",
+      msg: "Message"
+    },
     sectionsTitle: {
       aboutMe: "ABOUT ME",
       skills: "MY SKILLS",
@@ -97,6 +81,14 @@ export const translation: ITranslation = {
       skills: "Skills",
       projects: "Projects",
       contact: "Contact"
+    },
+    components: {
+      viewMore: "View More",
+      submitButton: "Send"
+    },
+    footer: {
+      madeWith: "Made with",
+      byMe: "by me."
     }
   },
 };
