@@ -4,7 +4,7 @@ import {
   SectionTitle,
   SkillBlock,
   SkillBlockLoading
-} from "../../../../components";
+} from "@/components";
 
 interface Skills {
   id: string;

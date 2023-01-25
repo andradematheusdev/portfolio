@@ -1,4 +1,4 @@
-import { SectionTitle, SubmitButton, TextArea, TextInput } from "../../../../components";
+import { SectionTitle, SubmitButton, TextArea, TextInput } from "@/components";
 
 export const Contact = () => {
   return (

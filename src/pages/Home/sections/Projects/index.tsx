@@ -5,7 +5,7 @@ import {
   SectionTitle,
   ProjectsList,
   ViewMore
-} from "../../../../components/";
+} from "@/components/";
 
 interface Projects {
   id: string;
