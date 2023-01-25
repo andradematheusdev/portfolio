@@ -37,6 +37,7 @@ export const Wellcome = () => {
             blank
           />
         </div>
+        <div className="invisible" id="about" />
       </div>
     </section>
     <BackgroundElement size={200} color={"#2563eb"} x={50} y={40} />
