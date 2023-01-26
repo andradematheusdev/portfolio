@@ -8,6 +8,13 @@ interface ITranslation {
     aboutMeSection: {
       hello: string;
       developerWith: string;
+      timeline: {
+        one: string;
+        two: string;
+        three: string;
+        four: string;
+        five: string;
+      };
     };
     skillsSection: {
       one: string;

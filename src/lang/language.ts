@@ -7,7 +7,14 @@ export const translation: ITranslation = {
     },
     aboutMeSection: {
       hello: "Olá, eu sou o",
-      developerWith: "Desenvolvedor front-end com"
+      developerWith: "Desenvolvedor front-end com",
+      timeline: {
+        one: "Tenho 27 anos, sou de Magé - RJ, estudo programação por conta própria e estou me graduando em Sistemas para Internet.",
+        two: "Minha jornada na programação começou em 2013 quando comecei a estudar programção web com desenvolvimento em php.",
+        three: "Em 2015 comecei a trabalhar como Designer Gráfico.",
+        four: "Alinhando a experiência de 8 anos como Designer com meus estudos de programação percebi que o front-end era a área certa para mim.",
+        five: "Hoje o foco dos meus estudos é em desenvolvimento com React e TypeScript."
+      },
     },
     skillsSection: {
       one: "Iniciante",
@@ -53,7 +60,14 @@ export const translation: ITranslation = {
     },
     aboutMeSection: {
       hello: "Hello, I am",
-      developerWith: "Front-end developer with"
+      developerWith: "Front-end developer with",
+      timeline: {
+        one: "I'm 27 years old, I'm from Magé - RJ, I study programming on my own and I'm graduating in Systems for the  Internet.",
+        two: "My programming journey started in 2013 when I started studying web development with php.",
+        three: "In 2015 I started working as a Graphic Designer.",
+        four: "Aligning the experience of 8 years as a Designer with my programming studies, I realized that front-end development was the right area for me.",
+        five: "Today the focus of my studies is on development with React and TypeScript."
+      }
     },
     skillsSection: {
       one: "Beginner",
