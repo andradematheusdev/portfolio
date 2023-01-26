@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-type Props = {
+interface IMeunuContextProps {
   children: React.ReactNode;
 };
 
@@ -11,9 +11,8 @@ export type MenuContextType = {
 
 export const Context = createContext({} as MenuContextType);
 
-export default function MenuContext({ children }: Props) {
+export const MenuContextProvider = ({ children }: IMeunuContextProps) => {
   const [menuState, setMenuState] = useState(false);
-  const menuStatePack = { menuState, setMenuState };
 
-  return <Context.Provider value={menuStatePack}>{children}</Context.Provider>;
+  return <Context.Provider value={{menuState, setMenuState}}>{children}</Context.Provider>;
 }

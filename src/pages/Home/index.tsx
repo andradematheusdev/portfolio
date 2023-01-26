@@ -1,6 +1,5 @@
-import { Header } from '../../components';
-import Footer from "../../components/Footer/Footer";
-import { Wellcome, Challenges, Contact, Projects, AboutMe, Skills } from '../../sections/';
+import { Header, Footer } from '@/components';
+import { Wellcome, Challenges, Contact, Projects, AboutMe, Skills } from './sections';
 
 export const Home = () => {
   return (
