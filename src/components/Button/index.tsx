@@ -13,9 +13,9 @@ export const Button = ({ url = "", className, children, text, blank, iconLeft, i
     <a
       href={url}
       target={blank ? "_blank" : "_self"}
-      className={` flex items-center justify-center text-center px-4 py-2 rounded-md transition-colors whitespace-nowrap ${className}`} 
+      className={` flex items-center justify-center text-center rounded-md transition-colors whitespace-nowrap overflow-hidden ${className}`} 
     >
-      <button role={"button"} {...rest} >
+      <button role={"button"} className="w-full h-full px-4 py-2" {...rest} >
         <span className="mr-2">{iconLeft}</span>
         <span>{text ?? children}</span>
         <span className="ml-2">{iconRight}</span>
