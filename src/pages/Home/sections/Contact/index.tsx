@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Button, SectionTitle, SubmitButton, TextArea, TextInput } from "@/components";
+import { Button, SectionTitle, TextArea, TextInput } from "@/components";
 import { Context } from "@/contexts/LanguageContext";
 import { translation } from "@/lang/language";
 

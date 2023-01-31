@@ -16,7 +16,6 @@ export * from './ProjectsNavigation';
 export * from './SectionTitle';
 export * from './SkillBlock';
 export * from './SmallHeader';
-export * from './SubmitButton';
 export * from './TextArea';
 export * from './TextInput';
 export * from './ViewMore';

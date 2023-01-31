@@ -12,7 +12,7 @@ import {
 } from '../';
 
 export const Header = () => {
-  const context = useContext(Context);
+  const { lang } = useContext(Context);
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
@@ -31,19 +31,19 @@ export const Header = () => {
         </div>
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-x-4 font-medium">
             <a href="#home" className="hover:text-violet-700 transition-colors">
-              {translation[context.lang].navigation.home}
+              {translation[lang].navigation.home}
             </a>
             <a href="#about" className="hover:text-violet-700 transition-colors">
-              {translation[context.lang].navigation.about}
+              {translation[lang].navigation.about}
             </a>
             <a href="#skills" className="hover:text-violet-700 transition-colors">
-              {translation[context.lang].navigation.skills}
+              {translation[lang].navigation.skills}
             </a>
             <a href="#projects" className="hover:text-violet-700 transition-colors">
-              {translation[context.lang].navigation.projects}
+              {translation[lang].navigation.projects}
             </a>
             <a href="#contact" className="hover:text-violet-700 transition-colors">
-              {translation[context.lang].navigation.contact}
+              {translation[lang].navigation.contact}
             </a>
         </nav> 
         <div className="w-64 text-right hidden lg:block">
