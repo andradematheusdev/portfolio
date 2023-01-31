@@ -1,4 +1,4 @@
-type Props = {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   url?: string;
   className?: string;
   children?: string;
@@ -8,19 +8,18 @@ type Props = {
   iconRight?: React.ReactNode;
 };
 
-export const Button = ({ url = "", className, children, text, blank, iconLeft, iconRight}: Props) => {
+export const Button = ({ url = "", className, children, text, blank, iconLeft, iconRight, ...rest}: IButtonProps) => {
   return (
     <a
       href={url}
-      className={`
-        flex items-center justify-center text-center px-4 py-2 rounded-md transition-colors whitespace-nowrap
-        ${className}
-      `}
       target={blank ? "_blank" : "_self"}
+      className={` flex items-center justify-center text-center px-4 py-2 rounded-md transition-colors whitespace-nowrap ${className}`} 
     >
-     <span className="mr-2">{iconLeft}</span>
-     <span>{text ?? children}</span>
-     <span className="ml-2">{iconRight}</span>
+      <button role={"button"} {...rest} >
+        <span className="mr-2">{iconLeft}</span>
+        <span>{text ?? children}</span>
+        <span className="ml-2">{iconRight}</span>
+      </button>    
     </a>
   );
 }
