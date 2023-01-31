@@ -1,4 +1,4 @@
-type Props = {
+interface IChallengeProps {
   title: string;
   url: string;
   desc: string;
@@ -7,7 +7,7 @@ type Props = {
   }
 };
 
-export const Challenge = ({ title, url, desc, image }: Props) => {
+export const Challenge = ({ title, url, desc, image }: IChallengeProps) => {
   return (
     <a
       href={url}

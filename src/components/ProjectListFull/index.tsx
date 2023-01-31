@@ -1,7 +1,7 @@
 import { ProjectCard } from "../";
 
 type Projects = {
-    id: string;
+  id: string;
   name: string;
   description: string;
   stack: string[];
@@ -11,13 +11,13 @@ type Projects = {
   };
   figma: string;
   repo: string;
-}
+};
 
-type Props = {
+interface IProjectsListFullProps {
   data: Projects[];
 }
 
-export const ProjectsListFull = ({data}: Props) => { 
+export const ProjectsListFull = ({ data }: IProjectsListFullProps) => {
   return (
     <div className="grid grid-cols-4 w-full gap-4">
       {data.map((project) => {
@@ -32,8 +32,8 @@ export const ProjectsListFull = ({data}: Props) => {
             figma={project.figma}
             repo={project.repo}
           />
-          );
-        })}
+        );
+      })}
     </div>
-  )
-}
+  );
+};

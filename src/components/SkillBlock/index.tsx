@@ -3,14 +3,14 @@ import { CircleNotch } from "phosphor-react";
 import { Context } from "@/contexts/LanguageContext";
 import { translation } from '@/lang/language';
 
-type Props = {
+interface ISkillBlockProps {
   tech: {
     name: string;
     level: number;
   };
 };
 
-export const SkillBlock = ({ tech }: Props) => {
+export const SkillBlock = ({ tech }: ISkillBlockProps) => {
   const context = useContext(Context);
   const knowledge = [
     translation[context.lang].skillsSection.one,

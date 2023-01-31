@@ -1,27 +1,35 @@
 import classNames from "classnames";
 
 type Props = {
-    name?: string;
-    id?: string;
-    children?: string;
-    rows?: number;
-    cols?: number;
-    className?: string;
-    placeHolder?: string;
-    noResize?: boolean;
-}
+  name?: string;
+  id?: string;
+  children?: string;
+  rows?: number;
+  cols?: number;
+  className?: string;
+  placeHolder?: string;
+  noResize?: boolean;
+};
 
-export const TextArea = ({children, className, cols = 1, rows, noResize = false, placeHolder, name, id}: Props) => {
+export const TextArea = ({
+  children,
+  className,
+  cols = 1,
+  rows,
+  noResize = false,
+  placeHolder,
+  name,
+  id,
+}: Props) => {
   return (
     <textarea
-        name={name}
-        id={id}
-        rows={rows}
-        cols={cols}
-        placeholder={placeHolder}
-        className={
-            classNames(
-                `
+      name={name}
+      id={id}
+      rows={rows}
+      cols={cols}
+      placeholder={placeHolder}
+      className={classNames(
+        `
                 block
                 w-full
                 border
@@ -31,11 +39,10 @@ export const TextArea = ({children, className, cols = 1, rows, noResize = false,
                 focus:outline-none
                 focus:border-violet-800
                 ${className}`,
-                {'resize-none': noResize}
-            )
-        }
+        { "resize-none": noResize }
+      )}
     >
-        {children}
+      {children}
     </textarea>
-  )
-}
+  );
+};

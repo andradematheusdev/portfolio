@@ -3,21 +3,21 @@ import { Context } from "@/contexts/LanguageContext";
 import { translation } from "@/lang/language";
 import { CaretRight } from "phosphor-react";
 
-type Props = {
+interface IViewMoreProps {
   url: string;
   blank?: boolean;
   className?: string;
 };
 
-export const ViewMore = ({ url, blank = false, className }: Props) => {
-  const context = useContext(Context);
+export const ViewMore = ({ url, blank = false, className }: IViewMoreProps) => {
+  const { lang } = useContext(Context);
   return (
     <a
       href={url}
       target={blank ? "_blank" : "_self"}
       className={`flex flex-row items-center whitespace-nowrap ${className}`}
     >
-      {translation[context.lang].components.viewMore} <CaretRight />
+      {translation[lang].components.viewMore} <CaretRight />
     </a>
   );
 };

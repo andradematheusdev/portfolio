@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { ProjectCard, ArrowRight, ArrowLeft } from "../";
 
 type Projects = {
-    id: string;
+  id: string;
   name: string;
   description: string;
   stack: string[];
@@ -13,28 +13,35 @@ type Projects = {
   };
   figma: string;
   repo: string;
-}
+};
 
-type Props = {
+interface IProjectListProps {
   data: Projects[];
 }
 
-export const ProjectsList = ({data}: Props) => {
+export const ProjectsList = ({ data }: IProjectListProps) => {
   const [isOverflowing, setIsOverflowing] = useState(false);
-  const defaultImage = '/images/skillsbg.jpg';
+  const defaultImage = "/images/skillsbg.jpg";
 
-  useEffect(()=>{
+  useEffect(() => {
     const el = document.getElementById("plContainer");
     const isOverflowing = el!.scrollWidth > el!.clientWidth;
     setIsOverflowing(isOverflowing);
-  },[]);
-  
+  }, []);
+
   const listRef = useRef(null);
 
   return (
     <div className="flex w-full relative items-center">
-    {isOverflowing && <ArrowLeft listRef={listRef} />}
-    <div className={classNames(`flex w-full gap-x-4 overflow-x-auto pb-8 scroll-smooth snap-x snap-mandatory`, {"justify-center": !isOverflowing})} id="plContainer" ref={listRef} >
+      {isOverflowing && <ArrowLeft listRef={listRef} />}
+      <div
+        className={classNames(
+          `flex w-full gap-x-4 overflow-x-auto pb-8 scroll-smooth snap-x snap-mandatory`,
+          { "justify-center": !isOverflowing }
+        )}
+        id="plContainer"
+        ref={listRef}
+      >
         {data.map((project) => {
           return (
             <ProjectCard
@@ -47,10 +54,10 @@ export const ProjectsList = ({data}: Props) => {
               figma={project.figma}
               repo={project.repo}
             />
-            );
-          })}
+          );
+        })}
+      </div>
+      {isOverflowing && <ArrowRight listRef={listRef} />}
     </div>
-    {isOverflowing && <ArrowRight listRef={listRef}/>}
-    </div>
-  )
-}
+  );
+};
