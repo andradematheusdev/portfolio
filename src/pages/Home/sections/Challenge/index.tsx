@@ -56,7 +56,7 @@ export const Challenges = () => {
           </div>
         }
       </div>
-      <div className="grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 items-start grid-flow-col gap-8 min-h-[150px]">
+      <div className="challenge-container grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 items-start grid-flow-col gap-8 min-h-[150px]">
         {loading ? (
             <CircleNotch className="animate-spin" size={32} color="#fff" />
         ) : (
