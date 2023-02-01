@@ -11,7 +11,7 @@ export const MobileMenuToggle = () => {
 
   return (
     <a className="flex min-w-[46] min-h-46" onClick={handleToggle}>
-      {context.menuState ? <X size={40} color={"#fff"} /> : <List size={40} color={"#fff"} />}
+      {context.menuState ? <X size={30} color={"#fff"} /> : <List size={32} color={"#fff"} />}
     </a>
   );
 }

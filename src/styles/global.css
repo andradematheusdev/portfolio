@@ -40,15 +40,15 @@ body{
 }
 
 .mobile-nav {
-  @apply backdrop-blur-2xl bg-nav-bg flex flex-col lg:hidden w-2/3 md:w-2/5 min-h-screen fixed transition-all;
+  @apply bg-zinc-900 flex flex-col lg:hidden w-2/3 md:w-2/5 min-h-screen fixed transition-all;
 }
 
 .mobile-nav .link {
-  @apply flex h-16 justify-center items-center border-b border-zinc-700 text-white;
+  @apply flex h-16 items-center border-b border-zinc-700 text-white leading-none text-sm gap-x-2;
 }
 
 .mobile-nav a {
-  @apply select-none;
+  @apply select-none px-4;
 }
 
 .mobile-nav .last {
