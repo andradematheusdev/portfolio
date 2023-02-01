@@ -14,7 +14,7 @@ export const Challenge = ({ title, url, desc, image }: IChallengeProps) => {
       className={`
         flex flex-col flex-1 rounded-2xl overflow-hidden items-center justify-end
         relative hover:scale-105 transition-transform min-w-[230px] aspect-video
-        challenge
+        challenge-item
       `}
       target={"_blank"}
     >
