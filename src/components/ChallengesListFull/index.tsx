@@ -18,7 +18,7 @@ export const ChallengesListFull = ({data}: IChallengeListFullProps) => {
   const defaultImage = '/images/skillsbg.jpg';
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 w-full gap-4">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 w-full gap-4 challenge-container">
       {data.map((challenge) => {
         return (
           <Challenge
