@@ -8,7 +8,7 @@ export const Wellcome = () => {
 
   return (
     <>
-      <section id="home" className="wellcome-section">
+      <section id="home" className="flex min-h-screen items-center justify-center flex-wrap z-10">
         <div className="flex flex-col flex-1 px-6 mt-20 lg:px-20 max-w-[1270px] lg:mt-0">
           <div className="flex items-center flex-col mb-8">
             <h2 className="lg:text-3xl block text-center">

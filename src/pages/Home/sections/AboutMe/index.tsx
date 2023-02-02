@@ -9,7 +9,7 @@ export const AboutMe = () => {
   const { lang } = useContext(Context);
 
   return (
-    <section className="about-section">
+    <section className="flex flex-col w-full pb-28 justify-center items-center px-8 lg:px-14">
       <div className="grid lg:grid-rows-1 lg:grid-cols-2 max-w-[1270px] items-center">
         <div className="flex w-full justify-center md:min-w-[520px]">
           <img src="https://github.com/andradematheusdev.png" className="rounded-full w-[400px] h-auto my-8 md:my-0 self-center" />

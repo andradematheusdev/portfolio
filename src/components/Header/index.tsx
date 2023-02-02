@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className={`my-header z-40 ${scrollClasses}`}>
+      <header className={`flex items-center justify-between px-4 md:px-16 fixed top-0 w-full transition-all z-40 ${scrollClasses}`}>
         <div className="w-64">
           <Logo className="fill-white" />
         </div>

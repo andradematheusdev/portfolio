@@ -47,7 +47,7 @@ const { data, loading } = useQuery<{ projects: Projects[] }>(GET_PROJECTS_QUERY)
 
 if (loading) {
   return (
-    <section id="projects" className="projects-section px-4 lg:px-10">
+    <section id="projects" className="flex flex-col min-h-screen items-center justify-center flex-wrap pb-8 px-4 lg:px-10">
       <SectionTitle title="projetos" className="text-lg my-16" />
       <div className="flex w-full justify-center">
         <ProjectCardLoading />
