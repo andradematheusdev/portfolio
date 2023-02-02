@@ -7,6 +7,7 @@ export * from './FigmaLink';
 export * from './Footer';
 export * from './Header';
 export * from './LanguageSelector';
+export * from './Loading';
 export * from './MobileMenu';
 export * from './MobileMenuToggle';
 export * from './ProjectCard';

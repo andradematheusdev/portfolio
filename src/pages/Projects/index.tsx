@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { ProjectCardLoading, Footer, ProjectsListFull, SmallHeader } from "@/components/";
+import { ProjectCardLoading, Footer, ProjectsListFull, SmallHeader, Loading } from "@/components/";
 
 interface Projects {
   id: string;
@@ -37,11 +37,9 @@ const { data, loading } = useQuery<{ projects: Projects[] }>(GET_PROJECTS_QUERY)
 
 if (loading) {
   return (
-    <section id="projects" className="projects-section px-4 lg:px-10">
-      <div className="flex w-full justify-center">
-        <ProjectCardLoading />
-      </div>
-    </section>
+    <div className="flex w-full min-h-screen items-center justify-center">
+      <Loading />
+    </div>
   );
 }
 

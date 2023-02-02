@@ -23,7 +23,6 @@ interface Projects {
   repo: string;
 }
 
-
 export const Projects = () => {
   const context = useContext(Context);
     
