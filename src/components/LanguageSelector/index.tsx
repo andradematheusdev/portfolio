@@ -6,6 +6,7 @@ export const LanguageSelector = () => {
   const context = useContext<LangContextType>(Context);
 
   function handleClick(lang: string){
+    localStorage.setItem("lang",lang);
     context.setLang(lang);
   }
   
