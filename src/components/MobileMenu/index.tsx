@@ -52,7 +52,7 @@ export const MobileMenu = () => {
           </a>
         </div>
         <div className="link border-none px-4" onClick={handleClick}>
-          <Button text="ENVIAR E-MAIL" className="border rounded-full w-full" />
+          <Button text="ENVIAR E-MAIL" className="border rounded-full w-full" url="mailto:andradematheus.dev@gmail.com" />
         </div>
       </div>
       <div className="flex items-center justify-center h-16">
