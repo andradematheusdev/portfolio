@@ -1,8 +1,6 @@
-type Color = `#${string}`;
-
 interface IBackgroundElementProps {
   size: number;
-  color: Color;
+  color: HexColor;
   x: number;
   y: number;
   opacity?: number;

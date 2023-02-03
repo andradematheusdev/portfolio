@@ -1,4 +1,4 @@
-type Props = {
+interface IChallengeProps {
   title: string;
   url: string;
   desc: string;
@@ -7,13 +7,14 @@ type Props = {
   }
 };
 
-export const Challenge = ({ title, url, desc, image }: Props) => {
+export const Challenge = ({ title, url, desc, image }: IChallengeProps) => {
   return (
     <a
       href={url}
       className={`
         flex flex-col flex-1 rounded-2xl overflow-hidden items-center justify-end
         relative hover:scale-105 transition-transform min-w-[230px] aspect-video
+        challenge-item
       `}
       target={"_blank"}
     >

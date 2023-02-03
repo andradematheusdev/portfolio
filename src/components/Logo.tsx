@@ -1,9 +1,9 @@
 type Props = {
-  className: string;
+  className?: string;
   url?: string;
 };
 
-function Logo({ className, url = "/" }: Props) {
+function Logo({ className = "fill-white", url = "/" }: Props) {
   return (
     <a href={url}>
       <svg

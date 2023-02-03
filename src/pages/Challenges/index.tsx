@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { ProjectCardLoading, Footer, SmallHeader, ChallengesListFull  } from "@/components/";
+import { Footer, SmallHeader, ChallengesListFull, Loading } from "@/components/";
 
 interface Challenge {
   id: string;
@@ -8,11 +8,10 @@ interface Challenge {
   url: string;
   image: {
     url: string;
-  }
+  };
 }
 
 export const Challenges = () => {
-
   const GET_CHALLENGES_QUERY = gql`
     query ChallengeQuery {
       challenges(orderBy: createdAt_DESC) {
@@ -27,25 +26,23 @@ export const Challenges = () => {
     }
   `;
 
-const { data, loading } = useQuery<{ challenges: Challenge[] }>(GET_CHALLENGES_QUERY);
+  const { data, loading } = useQuery<{ challenges: Challenge[] }>(GET_CHALLENGES_QUERY);
 
-if (loading) {
-  return (
-    <section id="projects" className="projects-section px-4 lg:px-10">
-      <div className="flex w-full justify-center">
-        <ProjectCardLoading />
+  if (loading) {
+    return (
+      <div className="flex w-full min-h-screen items-center justify-center">
+        <Loading />
       </div>
-    </section>
-  );
-}
+    );
+  }
 
-if (!data || !data.challenges) {
-  return (
-    <div className="flex w-full min-h-screen">
-      <span>Ops... Não foi possivel carregar o conteúdo 😞</span>
-    </div>
-  );
-}
+  if (!data || !data.challenges) {
+    return (
+      <div className="flex w-full min-h-screen">
+        <span>Ops... Não foi possivel carregar o conteúdo 😞</span>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -55,5 +52,5 @@ if (!data || !data.challenges) {
       </main>
       <Footer />
     </>
-  )
-}
+  );
+};

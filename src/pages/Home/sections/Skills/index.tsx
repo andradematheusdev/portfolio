@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
 import {
+  Loading,
   SectionTitle,
   SkillBlock,
-  SkillBlockLoading
 } from "@/components";
 import { Context } from "@/contexts/LanguageContext";
 import { translation } from '@/lang/language';
@@ -14,27 +14,6 @@ interface Skills {
   icon: string;
   description: string;
   skillLevel: number;
-}
-
-function SkillsLoading() {
-  return (
-    <section
-      id="skills"
-      className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none"
-    >
-      <div className="flex flex-1 flex-col items-center px-4 lg:px-10">
-        <SectionTitle title="Conhecimentos" className="my-16 text-xl" />
-        <div className="flex flex-row flex-wrap justify-center lg:justify-between w-full">
-          <div className="w-full lg:pr-2 lg:w-2/5 mb-8 lg:mb-0">
-           
-          </div>
-          <div className="grid lg:grid-cols-5 grid-cols-3 gap-6 w-full place-items-center place-content-start lg:w-2/5">
-            <SkillBlockLoading />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
 }
 
 function SkillsFailOrEmpty() {
@@ -72,7 +51,7 @@ export const Skills = () => {
   const { loading, data } = useQuery<{ skills: Skills[] }>(GET_SKILLS_QUERY);
 
   if (loading) {
-    return <SkillsLoading />;
+    return <Loading size={32} dots/>;
   }
 
   if (!data || !data.skills) {
@@ -80,7 +59,7 @@ export const Skills = () => {
   }
 
   return (
-    <section id="skills" className="skills-section overflow-hidden rounded-t-[32px] sm:rounded-none px-8">
+    <section id="skills" className="flex items-start justify-center pb-8 overflow-hidden rounded-t-[32px] sm:rounded-none px-8">
       <div className="flex flex-col w-full items-center lg:px-10 max-w-[1270px]">
         <SectionTitle title={translation[context.lang].sectionsTitle.skills} className="my-16 text-xl" />        
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full place-items-center place-content-start">

@@ -11,44 +11,16 @@ html, body {
   @apply text-white bg-neutral-900 overflow-x-hidden;
 }
 
-body{
-  @apply overflow-x-hidden;
-}
-
-.wellcome-section {
-  @apply flex min-h-screen items-center justify-center flex-wrap z-10;
-}
-
-.about-section {
-  @apply flex flex-col w-full pb-28 justify-center items-center px-8 lg:px-14;
-}
-
-.skills-section {
-  @apply flex items-start justify-center pb-8;
-}
-
-.projects-section {
-  @apply flex flex-col min-h-screen items-center justify-center flex-wrap pb-8;
-}
-
-.my-header {
-  @apply flex items-center justify-between px-2 md:px-16 fixed top-0 w-full transition-all;
-}
-
-.header-icon {
-  @apply bg-header-icon-bg p-2 border border-white rounded-full hover:border-violet-700 transition-colors hover:bg-header-icon-bg-hover;
-}
-
-.mobile-nav {
-  @apply backdrop-blur-2xl bg-nav-bg flex flex-col lg:hidden w-2/3 md:w-2/5 min-h-screen fixed transition-all;
+.mobile-nav{
+  @apply bg-zinc-900 flex flex-col lg:hidden w-2/3 md:w-2/5 min-h-screen fixed transition-all
 }
 
 .mobile-nav .link {
-  @apply flex h-16 justify-center items-center border-b border-zinc-700 text-white;
+  @apply flex h-16 items-center border-b border-zinc-700 text-white leading-none text-sm gap-x-2;
 }
 
 .mobile-nav a {
-  @apply select-none;
+  @apply select-none px-4;
 }
 
 .mobile-nav .last {
@@ -108,4 +80,13 @@ body{
   50% {
     background-position: 100% 50%;
   }
+}
+
+.challenge-item{
+  transition: 0.35s;
+}
+
+.challenge-container:hover > :not(:hover){
+  opacity: .4;
+  transform: scale(0.9);
 }
