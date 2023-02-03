@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Button, LanguageSelector } from "../";
 import { translation } from "@/lang/language";
-import { Context, MenuContextType } from "../../contexts/MobileMenuContext";
+import { Context as MenuContext, MenuContextType } from "../../contexts/MobileMenuContext";
 import { Context as LangContext} from "@/contexts/LanguageContext";
 import {
   AiOutlineHome,
@@ -15,7 +15,7 @@ import {
 import Logo from "../Logo";
 
 export const MobileMenu = () => {
-  const context = useContext<MenuContextType>(Context);
+  const context = useContext<MenuContextType>(MenuContext);
   const { lang } = useContext(LangContext);
 
   function handleClick() {
@@ -28,7 +28,7 @@ export const MobileMenu = () => {
     <div className={`mobile-nav z-50 ${menuVisible}`}>
       <div className="flex-1">
         <div className="flex w-full items-center justify-center py-4">
-          <Logo />
+          <Logo className="fill-violet-500" />
         </div>
         <a href="#" className="link first" onClick={handleClick}><AiOutlineHome size={20} />{translation[lang].navigation.home}</a>
         <a href="#about" className="link" onClick={handleClick}><AiOutlineIdcard size={20} />{translation[lang].navigation.about}</a>

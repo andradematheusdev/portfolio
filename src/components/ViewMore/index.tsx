@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Context } from "@/contexts/LanguageContext";
 import { translation } from "@/lang/language";
-import { CaretRight } from "phosphor-react";
+import { RxCaretRight } from "react-icons/rx";
 
 interface IViewMoreProps {
   url: string;
@@ -17,7 +17,7 @@ export const ViewMore = ({ url, blank = false, className }: IViewMoreProps) => {
       target={blank ? "_blank" : "_self"}
       className={`flex flex-row items-center whitespace-nowrap ${className}`}
     >
-      {translation[lang].components.viewMore} <CaretRight />
+      {translation[lang].components.viewMore} <RxCaretRight />
     </a>
   );
 };

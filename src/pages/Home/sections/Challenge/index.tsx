@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { gql, useQuery } from "@apollo/client";
-import { CircleNotch } from "phosphor-react";
-import { Challenge, SectionTitle, ViewMore } from "@/components/";
+import { Challenge, Loading, SectionTitle, ViewMore } from "@/components/";
 import { Context } from "@/contexts/LanguageContext";
 import { translation } from "@/lang/language";
 
@@ -12,7 +11,7 @@ interface Challenges {
   url: string;
   image: {
     url: string;
-  }
+  };
 }
 
 export const Challenges = () => {
@@ -34,6 +33,10 @@ export const Challenges = () => {
 
   const { data, loading } = useQuery<{ challenges: Challenges[] }>(GET_CHALLENGES_QUERY);
 
+  if (loading) {
+    return <Loading size={32} dots />;
+  }
+
   if (!data || !data.challenges) {
     return (
       <section className="flex flex-col w-full items-center min-h-[400px] px-16">
@@ -44,35 +47,33 @@ export const Challenges = () => {
       </section>
     );
   }
-  
+
   return (
     <section className="flex flex-col w-full items-center min-h-[400px] px-8 md:px-16 pb-16">
       <div className={"flex justify-center w-full my-8"}>
         <SectionTitle title={translation[lang].sectionsTitle.challenges} />
-        {
-          data.challenges.length >= 4 &&
+        {data.challenges.length >= 4 && (
           <div className="flex-1 flex justify-end">
-            <ViewMore url={"/challenges"} className="text-white hover:text-neutral-300 transition-colors" />
+            <ViewMore
+              url={"/challenges"}
+              className="text-white hover:text-neutral-300 transition-colors"
+            />
           </div>
-        }
+        )}
       </div>
       <div className="challenge-container grid grid-rows-4 md:grid-rows-2 lg:grid-rows-1 items-start grid-flow-col gap-8 min-h-[150px]">
-        {loading ? (
-            <CircleNotch className="animate-spin" size={32} color="#fff" />
-        ) : (
-          data?.challenges.map((challenge) => {
-            return (
-              <Challenge
-                key={challenge.id}
-                title={challenge.title}
-                desc={challenge.description}
-                url={challenge.url}
-                image={challenge.image}
-              />
-            );
-          })
-        )}
+        {data?.challenges.map((challenge) => {
+          return (
+            <Challenge
+              key={challenge.id}
+              title={challenge.title}
+              desc={challenge.description}
+              url={challenge.url}
+              image={challenge.image}
+            />
+          );
+        })}
       </div>
     </section>
   );
-}
+};

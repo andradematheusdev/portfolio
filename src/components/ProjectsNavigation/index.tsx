@@ -1,4 +1,4 @@
-import { CaretLeft, CaretRight } from "phosphor-react";
+import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 
 interface ILeftArrowProps {
   listRef: React.RefObject<HTMLInputElement>;
@@ -14,7 +14,7 @@ export const ArrowLeft = ({listRef}: ILeftArrowProps) => {
   }
 
   return (
-    <a role={"button"} className="flex items-center absolute left-0"><CaretLeft size={24} color="#fff" onClick={() => handleClick()} /></a>
+    <a role={"button"} className="flex items-center absolute left-0"><RxCaretLeft size={32} color="#fff" onClick={() => handleClick()} /></a>
   )
 }
 
@@ -24,6 +24,6 @@ export const ArrowRight = ({listRef}: IRightArrowProps) => {
   }
 
   return (
-    <a role={"button"} className="flex items-center absolute right-0"><CaretRight size={24} color="#fff" onClick={() => handleClick()}/></a>
+    <a role={"button"} className="flex items-center absolute right-0"><RxCaretRight size={32} color="#fff" onClick={() => handleClick()}/></a>
   )
 }

@@ -1,4 +1,4 @@
-import { CircleNotch } from "phosphor-react";
+import { FaCircleNotch } from "react-icons/fa";
 import { Button, FigmaLink } from "../";
 
 interface IProjectCardProps {
@@ -16,7 +16,7 @@ interface IProjectCardProps {
 export const ProjectCardLoading = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-zinc-800 rounded-xl overflow-hidden min-h-[450px] min-w-[325px] max-w-[325px]">
-      <CircleNotch size={32} className="animate-spin" color="#fff" />
+      <FaCircleNotch size={32} className="animate-spin" color="#fff" />
     </div>
   );
 }

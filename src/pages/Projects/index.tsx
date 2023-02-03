@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { ProjectCardLoading, Footer, ProjectsListFull, SmallHeader, Loading } from "@/components/";
+import { Footer, ProjectsListFull, SmallHeader, Loading } from "@/components/";
 
 interface Projects {
   id: string;

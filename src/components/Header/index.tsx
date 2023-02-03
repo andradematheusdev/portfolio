@@ -1,8 +1,6 @@
 import { useEffect, useState, useContext } from "react";
-
 import { Context } from "../../contexts/LanguageContext";
 import { translation } from "../../lang/language";
-
 import Logo from "../Logo";
 
 import {
