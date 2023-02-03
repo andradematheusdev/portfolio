@@ -1,4 +1,4 @@
-import { CaretLeft } from "phosphor-react"
+import { RxCaretLeft } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 
 export const BackButton = () => {
@@ -6,7 +6,7 @@ export const BackButton = () => {
 
   return (
     <a role={"button"} onClick={() => navigate(-1)}>
-      <CaretLeft size={24} color={"#fff"} weight={"bold"} />
+      <RxCaretLeft size={32} color={"#fff"} />
     </a>
   )
 }

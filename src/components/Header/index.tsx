@@ -19,6 +19,9 @@ export const Header = () => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
     });
+    window.addEventListener("load", () => {
+      setScroll(window.scrollY > 50);
+    });
   }, []);
 
   const scrollClasses = scroll ? "bg-nav-bg h-12 backdrop-blur-md" : "bg-none h-20";
