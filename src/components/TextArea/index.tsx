@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-type Props = {
+interface ITextAreaProps {
   name?: string;
   id?: string;
   children?: string;
@@ -20,7 +20,7 @@ export const TextArea = ({
   placeHolder,
   name,
   id,
-}: Props) => {
+}: ITextAreaProps) => {
   return (
     <textarea
       name={name}

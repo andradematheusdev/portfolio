@@ -4,7 +4,6 @@ import {
   Loading,
   SectionTitle,
   SkillBlock,
-  SkillBlockLoading
 } from "@/components";
 import { Context } from "@/contexts/LanguageContext";
 import { translation } from '@/lang/language';

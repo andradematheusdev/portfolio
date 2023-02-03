@@ -24,7 +24,7 @@ interface Projects {
 }
 
 export const Projects = () => {
-  const context = useContext(Context);
+  const { lang } = useContext(Context);
     
   const GET_PROJECTS_QUERY = gql`
   query GetProjects {
@@ -67,7 +67,7 @@ if (!data || !data.projects) {
   return (
     <section id="projects" className="projects-section px-4 lg:px-10">
       <div className="flex w-full items-center px-8 md:px-16">
-        <SectionTitle title={translation[context.lang].sectionsTitle.projects} className={classNames("text-lg my-16 flex-1",{"text-center": data.projects.length < 10})} />
+        <SectionTitle title={translation[lang].sectionsTitle.projects} className={classNames("text-lg my-16 flex-1",{"text-center": data.projects.length < 10})} />
         {
           data.projects.length >= 10 &&
           <div className="flex-1 flex justify-end">
