@@ -11,6 +11,10 @@ html, body {
   @apply text-white bg-neutral-900 overflow-x-hidden;
 }
 
+.mobile-nav{
+  @apply bg-zinc-900 flex flex-col lg:hidden w-2/3 md:w-2/5 min-h-screen fixed transition-all
+}
+
 .mobile-nav .link {
   @apply flex h-16 items-center border-b border-zinc-700 text-white leading-none text-sm gap-x-2;
 }

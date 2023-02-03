@@ -25,7 +25,7 @@ export const MobileMenu = () => {
   const menuVisible = context.menuState ? "left-0" : "left-[-100%] hidden";
 
   return (
-    <div className={`mobile-nav last:border-b last:border-zinc-700 bg-zinc-900 flex flex-col lg:hidden w-2/3 md:w-2/5 min-h-screen fixed transition-all z-50 ${menuVisible}`}>
+    <div className={`mobile-nav z-50 ${menuVisible}`}>
       <div className="flex-1">
         <div className="flex w-full items-center justify-center py-4">
           <Logo />
@@ -34,7 +34,7 @@ export const MobileMenu = () => {
         <a href="#about" className="link" onClick={handleClick}><AiOutlineIdcard size={20} />{translation[lang].navigation.about}</a>
         <a href="#skills" className="link" onClick={handleClick}><AiOutlineCode size={20} />{translation[lang].navigation.skills}</a>
         <a href="#projects" className="link" onClick={handleClick}><AiFillAppstore size={20} />{translation[lang].navigation.projects}</a>
-        <a href="#contact" className="link" onClick={handleClick}><AiOutlineMessage size={20} />{translation[lang].navigation.contact}</a>
+        <a href="#contact" className="link last" onClick={handleClick}><AiOutlineMessage size={20} />{translation[lang].navigation.contact}</a>
         <div className="flex flex-row border-b border-zinc-700">
           <a
             href="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
