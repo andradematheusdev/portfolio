@@ -1,5 +1,5 @@
 import { Header, Footer } from '@/components';
-import { Wellcome, Challenges, Contact, Projects, AboutMe, Skills } from './sections';
+import { Wellcome, Challenges, Contact, Projects, AboutMe, Skills, MyGitHub } from './sections';
 
 export const Home = () => {
   return (
@@ -11,6 +11,7 @@ export const Home = () => {
         <Skills />
         <Projects />
         <Challenges />
+        <MyGitHub />
         <Contact />
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Context, LangContextType } from "@/contexts/LanguageContext";
 import { translation } from "@/lang/language";
 import { BackgroundElement, Button } from "@/components";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Wellcome = () => {
   const { lang } = useContext<LangContextType>(Context);
@@ -24,12 +25,14 @@ export const Wellcome = () => {
           <div className="flex flex-row w-full space-x-2 justify-center">
             <Button
               text="GitHub"
+              iconRight={<FaGithub />}
               className="bg-violet-500 hover:bg-violet-600 w-full md:w-5/12 lg:w-2/12"
               url="https://github.com/andradematheusdev"
               blank
             />
             <Button
               text="LinkedIn"
+              iconRight={<FaLinkedin />}
               className="bg-none border-2 border-violet-500 hover:bg-violet-600 hover:border-violet-600 hover:text-white w-full md:w-5/12 lg:w-2/12"
               url="https://www.linkedin.com/in/matheus-andrade-ba2b16226/"
               blank

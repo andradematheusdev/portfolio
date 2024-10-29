@@ -50,6 +50,10 @@ export const translation: ITranslation = {
     footer: {
       madeWith: "Feito com",
       byMe: "por mim."
+    },
+    mygithub: {
+      liked: "Gostou dos meus projetos?",
+      seemore: "Veja mais alguns no meu GitHub!"
     }
   },
   "en": {
@@ -103,6 +107,10 @@ export const translation: ITranslation = {
     footer: {
       madeWith: "Made with",
       byMe: "by me."
+    },
+    mygithub: {
+      liked: "Did you liked my projects?",
+      seemore: "See some more on my GitHub page!"
     }
   },
 };

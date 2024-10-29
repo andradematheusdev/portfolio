@@ -1,4 +1,4 @@
-import { FaCircleNotch } from "react-icons/fa";
+import { FaCircleNotch, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Button, FigmaLink } from "../";
 
 interface IProjectCardProps {
@@ -46,6 +46,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
           <div className="flex-1 mb-4">
               <Button
                 text="REPO"
+                iconRight={<FaGithub />}
                 className="border-2 border-violet-500 bg-violet-500 hover:bg-violet-600 hover:border-violet-600"
                 url={repo}
                 blank
@@ -56,6 +57,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
               <div className="flex-1 mb-4">
               <Button
                 text="DEMO"
+                iconRight={<FaExternalLinkAlt />}
                 className="bg-none border-2 border-violet-500 hover:bg-violet-600 hover:border-violet-600 hover:text-white"
                 url={demo}
                 blank

@@ -4,3 +4,4 @@ export * from './Contact';
 export * from './Projects';
 export * from './AboutMe';
 export * from './Skills';
+export * from './MyGitHub';

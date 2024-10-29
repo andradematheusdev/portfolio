@@ -51,5 +51,9 @@ interface ITranslation {
       madeWith: string;
       byMe: string;
     }
+    mygithub: {
+      liked: string;
+      seemore: string;
+    }
   }
 }
