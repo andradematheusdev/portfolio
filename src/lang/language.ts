@@ -109,7 +109,7 @@ export const translation: ITranslation = {
       byMe: "by me."
     },
     mygithub: {
-      liked: "Did you liked my projects?",
+      liked: "Liked my projects?",
       seemore: "See some more on my GitHub page!"
     }
   },
