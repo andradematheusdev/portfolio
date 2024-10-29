@@ -8,7 +8,7 @@ export const MyGitHub = () => {
   const { lang } = useContext<LangContextType>(Context);
 
   return (
-    <section className="bg-zinc-800 flex flex-col w-full py-16 align-middle items-center gap-y-6">
+    <section className="bg-zinc-800 flex flex-col w-full py-16 align-middle items-center gap-y-6 px-8">
           <div className="text-center">
             <h2 className="text-3xl py-2">{translation[lang].mygithub.liked}</h2>
             <p className="text-neutral-400">{translation[lang].mygithub.seemore}</p>
