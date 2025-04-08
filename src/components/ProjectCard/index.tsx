@@ -29,7 +29,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
         {figma && <FigmaLink url={figma} />}
       </div>
       <div className="flex w-full p-2 text-xl font-bold justify-center text-white py-4">
-        <span>{name}</span>
+        <span className="w-full text-center">{name}</span>
       </div>
       <div className="flex flex-1 w-full px-6 justify-center items-center">
         <span className="text-justify text-white text-md">{description}</span>
@@ -45,7 +45,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
           {repo && (
           <div className="flex-1 mb-4">
               <Button
-                text="REPO"
+                text="CÓDIGO"
                 iconRight={<FaGithub />}
                 className="border-2 border-violet-500 bg-violet-500 hover:bg-violet-600 hover:border-violet-600"
                 url={repo}
