@@ -56,7 +56,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
             {demo && (
               <div className="flex-1 mb-4">
               <Button
-                text="DEMO"
+                text="ABRIR"
                 iconRight={<FaExternalLinkAlt />}
                 className="bg-none border-2 border-violet-500 hover:bg-violet-600 hover:border-violet-600 hover:text-white"
                 url={demo}
