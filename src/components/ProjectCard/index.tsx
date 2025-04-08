@@ -31,7 +31,7 @@ export function ProjectCard({ demo, description, name, stack, image, figma, repo
       <div className="flex w-full p-2 text-xl font-bold justify-center text-white py-4">
         <span className="w-full text-center">{name}</span>
       </div>
-      <div className="flex flex-1 w-full px-6 justify-center items-center">
+      <div className="flex flex-1 w-full px-6 justify-center items-start">
         <span className="text-justify text-white text-md">{description}</span>
       </div>
       <div className="flex w-full p-4 text-sm">
