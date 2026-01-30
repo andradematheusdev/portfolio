@@ -13,7 +13,7 @@ export const translation: ITranslation = {
     wellcomeSection: {
       helloWorld: "Olá Mundo, me chamo Matheus Andrade!",
       frontEnd: "Desenvolvedor Front-End focado em JavaScript",
-      about: `Tenho ${age} anos, sou apaixonado por tecnologia, estudo programação por conta própria a mais de 1 ano e tenho muita facilidade para aprender coisas novas!`,
+      about: `Tenho ${age} anos, sou apaixonado por tecnologia, estudo programação por conta própria e tenho muita facilidade para aprender coisas novas!`,
     },
     aboutMeSection: {
       hello: "Olá, eu sou o",
@@ -70,7 +70,7 @@ export const translation: ITranslation = {
     wellcomeSection: {
       helloWorld: "Hello World, I am Matheus Andrade!",
       frontEnd: "Front-End Developer focused on JavaScript",
-      about: `I'm ${age} years old, passionate about technology, I've been studying programming on my own for over a year and it is very easy for me to learn new things!`,
+      about: `I'm ${age} years old, passionate about technology, I learned to code on my own and it is very easy for me to learn new things!`,
     },
     aboutMeSection: {
       hello: "Hello, I am",
